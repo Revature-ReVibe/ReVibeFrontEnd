@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  //set up localhost endpoints here
 };
 
 /*
