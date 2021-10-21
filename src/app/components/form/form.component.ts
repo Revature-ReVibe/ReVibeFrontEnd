@@ -32,7 +32,7 @@ clearForm() {
 account = new Account("sampleUserName", "samplePassword");
 
 submitForm() {
-  this.accountService.submitForm(this.account).subscribe((data) => console.log(data), (error) => { console.log("Error handler was invoked")})
+  return this.accountService.submitForm(this.account).subscribe((data) => console.log(data), (error) => { console.log("Error handler was invoked")})
 
   }
 }
