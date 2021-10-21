@@ -11,7 +11,7 @@ export class AccountService {
   constructor(private httpClient:HttpClient) { }
 
   submitForm(Account:{}){
-   // return this.httpClient.post<any>(environment.submitForm, Account) as Observable<Account[]>
+   return this.httpClient.post<any>(environment.submitForm, Account) as Observable<Account[]>
    console.log("run request");
   }
 }
