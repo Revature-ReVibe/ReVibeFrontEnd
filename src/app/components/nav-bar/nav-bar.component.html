@@ -6,7 +6,7 @@
             <li><a dataitem='Profile' id="profile" [routerLink]="['/account']">Profile</a></li>
             <li><a dataitem='Post' id="post" [routerLink]="['']">Post</a></li>
             <li><a dataitem='Login' id="login" [routerLink]="['login']">Login</a></li>
-            <li><a dataitem='Logout' id="logout" [routerLink]="['logout']">Logout</a></li>
+            <li><a dataitem='Logout' id="logout" [routerLink]="['logout']" (click)="logout()">Logout</a></li>
         </ul>
     </nav>
 </div>
