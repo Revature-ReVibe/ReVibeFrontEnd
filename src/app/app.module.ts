@@ -9,6 +9,7 @@ import { FormComponent } from './components/form/form.component';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
+import { VibeComponent } from './vibe/vibe.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     AccountComponent,
     FormComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    VibeComponent
   ],
   imports: [
     BrowserModule,
