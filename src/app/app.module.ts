@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 
-import { AppComponent } from './components/app.component';
-import { AccountComponent } from './account/account.component';
-import { FormComponent } from './components/form/form.component';
+import { AppComponent } from './app.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { HomeComponent } from './home/home.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponent,
-    FormComponent,
-    NavBarComponent,
-    HomeComponent
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
