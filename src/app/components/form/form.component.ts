@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AccountService} from '../../service/account.service';
+import { Account } from 'src/app/models/Account';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -11,7 +13,7 @@ username:String='';
 field:String='';
 
 
-  constructor() { }
+  constructor(private accountService:AccountService, private httpClient:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +24,15 @@ clearForm() {
     return;
   }
 
+  
   this.name='';
   this.username='';
   this.field='';
 }
+account = new Account("sampleUserName", "samplePassword");
+
+submitForm() {
+  this.accountService.submitForm(this.account).subscribe((data) => console.log(data), (error) => { console.log("Error handler was invoked")})
+
+  }
 }
