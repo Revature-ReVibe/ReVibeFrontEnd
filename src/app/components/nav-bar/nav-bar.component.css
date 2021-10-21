@@ -1,11 +1,44 @@
-nav {
-    margin-left: 5em;
-    margin-top: 2em;
-}
-
-a {
-    display: inline;
-    font-size: 25px;
-    padding: 8px;
-    background-color:lightskyblue;
+  nav {
+    background-color: blue;
+    top: 0;
+    left: 0;
+    position: sticky;
   }
+    nav .menuItems {
+      background-color: black;
+  
+      list-style: none;
+      display: flex;
+    }
+    nav .menuItems li {
+      margin: 25px;
+  
+    }
+    nav .menuItems li a {
+      background-color: black;
+  
+      text-decoration: none;
+      color: #8f8f8f;
+      font-size: 24px;
+      font-weight: 400;
+      transition: all 0.5s ease-in-out;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+    }
+    nav .menuItems li a::before {
+      content: attr(data-item);
+      transition: 0.5s;
+      color: #ffae00;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+    }
+    nav .menuItems li a:hover::before {
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+    }
