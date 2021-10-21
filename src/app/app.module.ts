@@ -9,7 +9,10 @@ import { FormComponent } from './components/form/form.component';
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { VibeComponent } from './vibe/vibe.component';
+import { VibeComponent } from './components/posts/vibe/vibe.component';
+import { GeneralFeedComponent } from './components/posts/feeds/general-feed/general-feed.component';
+import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.component';
+import { FeedComponent } from './components/posts/feeds/feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { VibeComponent } from './vibe/vibe.component';
     FormComponent,
     NavBarComponent,
     HomeComponent,
-    VibeComponent
+    VibeComponent,
+    GeneralFeedComponent,
+    UserFeedComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
