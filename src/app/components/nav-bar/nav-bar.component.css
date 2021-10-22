@@ -1,0 +1,11 @@
+nav {
+    margin-left: 5em;
+    margin-top: 2em;
+}
+
+a {
+    display: inline;
+    font-size: 25px;
+    padding: 8px;
+    background-color:lightskyblue;
+  }
