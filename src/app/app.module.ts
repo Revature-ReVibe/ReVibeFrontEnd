@@ -24,6 +24,7 @@ import { FormComponent } from './components/form/form.component';
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
 import { LoginService } from './service/loginService/login.service';
+import { VibeComponent } from './vibe/vibe.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginService } from './service/loginService/login.service';
     NavBarComponent,
     HomeComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    VibeComponent
   ],
   imports: [
     BrowserModule,
