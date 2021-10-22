@@ -17,8 +17,10 @@ import { HttpClient} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AccountComponent } from './components/account/account.component';
+//import { AccountComponent } from './components/account/account.component';
 import { FormComponent } from './components/form/form.component';
+//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
 import { LoginService } from './service/loginService/login.service';
@@ -26,7 +28,7 @@ import { LoginService } from './service/loginService/login.service';
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponent,
+    //AccountComponent,
     FormComponent,
     NavBarComponent,
     HomeComponent,
