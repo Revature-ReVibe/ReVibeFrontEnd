@@ -11,7 +11,7 @@ export class LogoutService {
 
   isloggedIn=false;
   
-  usr:User= new User("", "", "acbd")
+  // usr:User= new User("", "", "acbd")
   
 
   constructor(private router:Router, private login:LoginService) { }
@@ -25,8 +25,8 @@ export class LogoutService {
   signout(){
     this.isloggedIn=false;
     console.log("you are logged out");
+    localStorage.removeItem('ReVibeSocialMediaApp-LocalStorageLocation'); //onnce we set the localStorage in login response, I will call that item.
     this.login.user.next();
-    localStorage.removeItem('usr'); //onnce we set the localStorage in login response, I will call that item.
     this.router.navigate['/login'];
 
   }
