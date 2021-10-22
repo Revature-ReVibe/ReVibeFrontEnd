@@ -12,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AccountService } from './service/account.service';
+import { LogoutService } from './service/logoutService/logout.service';
+import { LoginService } from './service/loginService/login.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [LoginService, LogoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
