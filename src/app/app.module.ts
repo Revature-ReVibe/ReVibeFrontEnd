@@ -14,6 +14,7 @@ import { GeneralFeedComponent } from './components/posts/feeds/general-feed/gene
 import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.component';
 import { FeedComponent } from './components/posts/feeds/feed/feed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollingModule } from "@angular/cdk/scrolling";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

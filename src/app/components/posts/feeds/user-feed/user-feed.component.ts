@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Vibe } from "../../../../models/Vibe";
+import { Account } from "../../../../models/Account";
+
+const postCount: number = 100;
 
 @Component({
   selector: 'app-user-feed',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFeedComponent implements OnInit {
 
+  vibes: Vibe[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    //Dummy data, should be replaced with fetching data from server (get posts associated with user)
+    for(let i = 0; i < postCount; i++) {
+      let newVibe: Vibe = new Vibe(i, new Account('uname', 'pwrd'), 'Message', []);
+      this.vibes.push(newVibe);
+    }
   }
 
 }

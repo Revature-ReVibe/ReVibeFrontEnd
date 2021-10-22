@@ -14,6 +14,7 @@ export class GeneralFeedComponent implements OnInit {
   vibes: Vibe[] = [];
 
   constructor() {
+    //Dummy data, should be replaced with fetching data from server (get all posts)
     for(let i = 0; i < postCount; i++) {
       let newVibe: Vibe = new Vibe(i, new Account('uname', 'pwrd'), 'Message', []);
       this.vibes.push(newVibe);
