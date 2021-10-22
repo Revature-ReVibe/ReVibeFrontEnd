@@ -19,6 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AccountComponent } from './components/account/account.component';
 import { FormComponent } from './components/form/form.component';
+import { AccountService } from './service/account.service';
+import { LogoutService } from './service/logoutService/logout.service';
+import { LoginService } from './service/loginService/login.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +41,10 @@ import { FormComponent } from './components/form/form.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [LoginService, LogoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
