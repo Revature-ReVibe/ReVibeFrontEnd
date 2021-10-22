@@ -9,6 +9,8 @@ import { RefrenceSheet } from '../Models/oneRefrenceSheetToRuleThemAll';
   providedIn: 'root'
 })
 export class LoginService {
+  // this needs to be changed based on the backend
+  // RefrenceSheet.getUrl() is just "http://localhost:8080"
   private url:String = RefrenceSheet.getUrl() + "/users/";
   private currentUserSubject: BehaviorSubject<loginObj>;
   public currentUser: Observable<loginObj>;

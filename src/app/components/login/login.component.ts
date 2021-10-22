@@ -26,9 +26,7 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    console.log()
-    console.log()
-    
+    this.loginService.login(this.f.username.value, this.f.password.value).subscribe();
   }
 
   newAccount(){
