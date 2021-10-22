@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.loginService.login(this.f.username.value, this.f.password.value).subscribe();
+    this.rout.navigateByUrl("/home");
   }
 
   newAccount(){
