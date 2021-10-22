@@ -13,6 +13,7 @@ import { VibeComponent } from './components/posts/vibe/vibe.component';
 import { GeneralFeedComponent } from './components/posts/feeds/general-feed/general-feed.component';
 import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.component';
 import { FeedComponent } from './components/posts/feeds/feed/feed.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FeedComponent } from './components/posts/feeds/feed/feed.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
