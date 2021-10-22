@@ -23,8 +23,8 @@ import { FormComponent } from './components/form/form.component';
 //import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
-import { LoginService } from './service/loginService/login.service';
 import { VibeComponent } from './vibe/vibe.component';
+import { LoginService } from './service/login.service';
 
 @NgModule({
   declarations: [
