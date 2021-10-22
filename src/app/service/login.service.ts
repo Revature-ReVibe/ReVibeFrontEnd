@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { loginObj } from '../Models/loginObj';
 import { RefrenceSheet } from '../Models/oneRefrenceSheetToRuleThemAll';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,6 @@ export class LoginService {
   }
 
   next(){
-    this.currentUserSubject.next();
+    this.currentUserSubject.next(new loginObj);
   }
 }
