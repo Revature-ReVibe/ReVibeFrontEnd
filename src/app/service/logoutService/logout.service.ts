@@ -26,7 +26,7 @@ export class LogoutService {
     this.isloggedIn=false;
     console.log("you are logged out");
     localStorage.removeItem('ReVibeSocialMediaApp-LocalStorageLocation'); //onnce we set the localStorage in login response, I will call that item.
-    this.login.user.next();
+    //this.login.currentUser.next();
     this.router.navigate['/login'];
 
   }

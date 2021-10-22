@@ -16,7 +16,7 @@ export class LoginService {
   public currentUser: Observable<loginObj>;
 
   constructor(private http:HttpClient) {
-    let isNotNull = localStorage.getItem('currentUser');
+    let isNotNull = localStorage.getItem('ReVibeSocialMediaApp-LocalStorageLocation');
     if(isNotNull) {
       this.currentUserSubject = new BehaviorSubject<loginObj>(JSON.parse(isNotNull));
     } else {
