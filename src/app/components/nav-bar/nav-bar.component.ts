@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Account } from 'src/app/models/Account';
 import { AccountService } from 'src/app/service/account.service';
+import { LogoutService } from 'src/app/service/logoutService/logout.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,19 +11,14 @@ import { AccountService } from 'src/app/service/account.service';
 })
 export class NavBarComponent implements OnInit {
 
-  static userAccount:Account = new Account("", "");
-
-  constructor(private router:Router) { }
+  constructor(private logout:LogoutService) { }
 
   ngOnInit(): void {
   }
-
-  //once login is ready then will implement logout
-  logout(){
-    localStorage.removeItem('userAccount');
-    this.router.navigate['/login'];
-    // this.aServ.signout();
-
+  
+  signout(event:Event){
+    event.preventDefault();
+    this.logout.signout();
   }
 
 }

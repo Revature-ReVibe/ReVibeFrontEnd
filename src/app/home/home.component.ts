@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { stringify } from 'querystring';
+import { LoginService } from '../service/loginService/login.service';
 
 @Component({
   selector: 'app-home',
@@ -11,19 +13,13 @@ export class HomeComponent implements OnInit {
   username:string="";
   password:string="";
 
-  constructor(private route:Router) { }
+  constructor(private route:Router, private logServ:LoginService) { }
 
   ngOnInit(): void {
   }
 
-  // checkLogin(){
-  //   console.log(this.username);
-  //   if(this.username=="admin" && this.password=="password"){
-  //     console.log("you are logged in");
-  //     this.route.navigate['/home']
-  //   }else{
-  //     console.log("wrong input");
-  //   }
-  // }
+  checkLogin(){
+    this.logServ.login(this.username, this.password) 
+   }
 
 }
