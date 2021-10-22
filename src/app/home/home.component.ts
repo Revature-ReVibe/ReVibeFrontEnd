@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
   username:string="";
   password:string="";
 
-  constructor(private route:Router, private logServ:LoginService) { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
 
-  checkLogin(){
-    this.logServ.login(this.username, this.password) 
-   }
+  // checkLogin(){
+  //   this.logServ.login(this.username, this.password) 
+  //  }
 
 }

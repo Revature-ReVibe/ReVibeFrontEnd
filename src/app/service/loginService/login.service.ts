@@ -12,13 +12,4 @@ export class LoginService {
 
 
   constructor() { }
-
-  login(username:string, password:string){
-    console.log(username);
-    if(username=="naresh" && password=="nigam"){
-      console.log("welcome")
-    }else{
-      console.log("wrong data");
-    }
-  }
 }
