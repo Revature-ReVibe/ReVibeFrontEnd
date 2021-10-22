@@ -32,5 +32,5 @@ export class LoginService {
             this.currentUserSubject.next(user);
             return "other";
         }));
-}
+  }
 }

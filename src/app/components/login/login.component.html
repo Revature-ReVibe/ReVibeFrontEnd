@@ -1,8 +1,10 @@
 <div class="center" id="div-login-component">
-    Username: <input type="text" id="input-login-username"><br>
-    Password: <input type="password" id="input-login-password"><br>
-    <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
-    <button id="button-login-submit" (click)="login()">Login</button><br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        Username: <input type="text" id="input-login-username"><br>
+        Password: <input type="password" id="input-login-password"><br>
+        <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
+        <button id="button-login-submit" (click)="login()">Login</button><br>
+    </form>
     <!-- Filler line break -->
     <pre>
  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
