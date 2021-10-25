@@ -1,1 +1,5 @@
 <h1>VIBE SESSION</h1>
+
+<div  id="member_container">
+    <app-member (updateMemberEvent)="receiveMemberFromChild($event)" *ngFor="let m of members" [member]="m"></app-member>
+  </div>

@@ -12,30 +12,29 @@ export class VibeSessionComponent implements OnInit {
   constructor() { }
   
   //dummy member data
-  member1 = new SessionMember("vibesession1", 1, 1, "member1")
-  member2 = new SessionMember("vibesession1", 2, 2, "member2")
+  
+  members: SessionMember[] = [
+    new SessionMember("vibesession1", 1, 1, "member1"),
+    new SessionMember("vibesession1", 1, 2, "member2"),
+    new SessionMember("vibesession1", 1, 3, "member3"),
+    new SessionMember("vibesession1", 1, 4, "member4"),
 
-  //vibe sesh members to be displayed
-  members : SessionMember[];
+    new SessionMember("vibesession1", 2, 1, "member5"),
+    new SessionMember("vibesession1", 2, 2, "member6")
 
+  ];
   
   ngOnInit(): void {
-    this.members[0] = this.member1;
-    this.members[1] = this.member2;
+    //this.members[1] = this.member1;
+    //this.members[2] = this.member2;
     this.showAllByVibeId;
   }
-  @Input()
-  member:SessionMember;
 
-  @Output()
-  updateMemberEvent = new EventEmitter<SessionMember>();
-
-  updatedMember:SessionMember = new SessionMember("emitvibesession1", 2, 5, "emitmember2")
-
-  updateMemberState(){
-    this.updateMemberEvent.emit(this.updatedMember);
+  receiveMemberFromChild(receivedMember:SessionMember){
+    //console.log(receivedMember);
+    console.log(this.members);
   }
-
+  
   showAllByVibeId()
   {
 
