@@ -28,6 +28,8 @@ import { VibeComponent } from './vibe/vibe.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import {MatCardModule} from '@angular/material/card';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { EventsComponent } from './components/events/events.component';
+import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     RegistrationComponent,
     VibeComponent,
     UserProfileComponent,
-    SidebarComponent
+    SidebarComponent,
+    EventsComponent,
+    VibeSessionComponent
   ],
   imports: [
     BrowserModule,

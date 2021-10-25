@@ -8,6 +8,8 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegistrationComponent } from "./components/registration/registration.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { EventsComponent } from "./components/events/events.component";
+import { VibeSessionComponent } from "./components/vibe-session/vibe-session.component";
 
 const routes: Routes = [
     {
@@ -27,6 +29,15 @@ const routes: Routes = [
     {
       path: "registration",
       component: RegistrationComponent
+    },
+    {
+      path: "events",
+      component: EventsComponent
+    },
+
+    {
+      path: "vibe-session",
+      component: VibeSessionComponent
     }
 ];
 
