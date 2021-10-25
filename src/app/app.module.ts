@@ -15,6 +15,11 @@ import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.
 import { FeedComponent } from './components/posts/feeds/feed/feed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from "@angular/cdk/scrolling";
+import { NewVibeComponent } from './components/posts/new-vibe/new-vibe.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -26,13 +31,18 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
     VibeComponent,
     GeneralFeedComponent,
     UserFeedComponent,
-    FeedComponent
+    FeedComponent,
+    NewVibeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ScrollingModule
+    ScrollingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
