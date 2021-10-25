@@ -1,10 +1,8 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { CommonModule } from "@angular/common";
-import { Routes } from "@angular/router";
-import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
+import { RouterModule, Routes } from "@angular/router";
 import { AccountComponent } from "./account/account.component";
 import { HomeComponent } from "./home/home.component";
+import { GeneralFeedComponent } from "./components/posts/feeds/general-feed/general-feed.component";
 
 const routes: Routes = [
     {
@@ -15,6 +13,11 @@ const routes: Routes = [
     {
         path: "account",
         component: AccountComponent,
+    },
+
+    {
+        path: "feed",
+        component: GeneralFeedComponent
     }
 ];
 
