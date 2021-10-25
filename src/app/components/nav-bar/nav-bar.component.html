@@ -3,7 +3,7 @@
     <nav id="navbar">
         <ul class="menuItems">
             <li><a dataitem='Home' id="home" [routerLink]="['']">Home</a></li>
-            <li><a dataitem='Profile' id="profile" [routerLink]="['account']">Profile</a></li>
+            <li><a dataitem='Profile' id="profile" [routerLink]="['users/:id']">Profile</a></li>
             <li><a dataitem='Post' id="post" [routerLink]="['']">Post</a></li>
             <li><a dataitem='Login' id="login" [routerLink]="['login']">Login</a></li>
             <li><a dataitem='Logout' id="logout" [routerLink]="['logout']" href="#" (click)="signout($event)">Logout</a></li>
