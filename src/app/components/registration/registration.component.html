@@ -1,26 +1,40 @@
 <div id="newAccount">
   <form #accountform="ngForm">
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input id="nameInput" matInput placeholder="Name" type="text"
+    <div>
+      <label>Name</label>
+      <input id="nameInput" placeholder="Name" type="text"
       [(ngModel)]="account.name"
       name="name"
       #name="ngModel">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Username</mat-label>
-      <input id="usernameInput" matInput placeholder="Username" type="text"
+    </div>
+    <div>
+      <label>Username</label>
+      <input id="usernameInput" placeholder="Username" type="text"
       [(ngModel)]="account.username"
       name="username"
       #name="ngModel">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Password</mat-label>
-      <input id="passwordInput" matInput placeholder="Name" type="text"
+    </div>
+    <div>
+      <label>Password</label>
+      <input id="passwordInput" placeholder="Password" type="text"
       [(ngModel)]="account.password"
       name="password"
       #name="ngModel">
-    </mat-form-field>
+    </div>
+    <div>
+      <label>Email</label>
+      <input id="emailInput" placeholder="Email" type="text"
+      [(ngModel)]="account.email"
+      name="email"
+      #name="ngModel">
+    </div>
+    <div>
+      <label>Profile Picture</label>
+      <input id="picInput" placeholder="Profile Picture" type="text"
+      [(ngModel)]="account.profilepic"
+      name="profilepic"
+      #name="ngModel">
+    </div>
     <button type="submit" (click)="newAccount()">Submit</button>
   </form>
 </div>
