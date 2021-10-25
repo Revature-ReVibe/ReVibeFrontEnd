@@ -16,17 +16,16 @@ export class RegistrationComponent implements OnInit {
   }
 
   account: Account = {
-    id: 0,
     email: '',
     username: '',
     password: '',
     name: '',
-    profilepic: '',
+    profilePic: '',
   }
 
   newAccount(): void {
     this.registrationService.newAccount(this.account).subscribe()
-    this.router.navigate(['/login'])
+    //this.router.navigate(['/login'])
   }
 
 }
