@@ -30,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EventsComponent } from './components/events/events.component';
 import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
+import { MemberComponent } from './components/member/member.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { VibeSessionComponent } from './components/vibe-session/vibe-session.com
     UserProfileComponent,
     SidebarComponent,
     EventsComponent,
-    VibeSessionComponent
+    VibeSessionComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,

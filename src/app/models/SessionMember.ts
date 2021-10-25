@@ -1,6 +1,6 @@
-export class VibeSession{
+export class SessionMember{
 
-    constructor(public name: string, public memberId: number, public memberName: string)
+    constructor(public name: string, public vibeId: number, public memberId: number, public memberName: string)
     {
         this.name = name;
         this.memberId = memberId;
@@ -10,6 +10,11 @@ export class VibeSession{
     getName()
     {
         return this.name;
+    }
+
+    getVibeId()
+    {
+        return this.vibeId;
     }
 
     getMemberId()
