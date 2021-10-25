@@ -27,6 +27,7 @@ import { LoginService } from './service/loginService/login.service';
 import { VibeComponent } from './vibe/vibe.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import {MatCardModule} from '@angular/material/card';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatCardModule} from '@angular/material/card';
     LoginComponent,
     RegistrationComponent,
     VibeComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
