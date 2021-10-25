@@ -7,6 +7,7 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegistrationComponent } from "./components/registration/registration.component";
+import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 
 const routes: Routes = [
     {
@@ -16,6 +17,11 @@ const routes: Routes = [
     {
       path: "login", 
       component: LoginComponent
+    },
+    
+    {
+      path:'users/:id',
+      component: UserProfileComponent
     },
 
     {

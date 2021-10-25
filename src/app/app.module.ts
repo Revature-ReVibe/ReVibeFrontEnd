@@ -25,6 +25,8 @@ import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
 import { LoginService } from './service/loginService/login.service';
 import { VibeComponent } from './vibe/vibe.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { VibeComponent } from './vibe/vibe.component';
     HomeComponent,
     LoginComponent,
     RegistrationComponent,
-    VibeComponent
+    VibeComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { VibeComponent } from './vibe/vibe.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [LoginService, LogoutService],
   bootstrap: [AppComponent]
