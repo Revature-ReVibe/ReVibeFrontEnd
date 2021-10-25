@@ -1,1 +1,20 @@
-<p>vibe works!</p>
+<mat-card class="vibe-card">
+
+    <mat-card-header>
+        <img mat-card-avatar src= {{inputVibe.vibePic}}>
+        <mat-card-title>{{inputAccount.username}}</mat-card-title>
+    </mat-card-header>
+
+      <img mat-card-image src= {{inputVibe.vibePic}} >
+
+    <mat-card-content>
+        <p>
+            {{inputVibe.vibeMessage}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-footer>
+        {{inputAccountArray.length}} people checked this Vibe, including {{inputAccountArray[0].username}} and {{inputAccountArray[1].username}}
+    </mat-card-footer>
+
+</mat-card>
