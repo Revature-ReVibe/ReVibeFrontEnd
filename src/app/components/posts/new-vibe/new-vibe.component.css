@@ -1,0 +1,13 @@
+mat-card-content {
+  width: 100%;
+  border: black 1px solid;
+}
+
+mat-card-actions {
+  display: flex;
+  align-content: flex-end;
+}
+
+textarea {
+  width: 100%
+}
