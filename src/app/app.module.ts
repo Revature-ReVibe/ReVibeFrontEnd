@@ -15,6 +15,7 @@ import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.
 import { FeedComponent } from './components/posts/feeds/feed/feed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from "@angular/cdk/scrolling";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ScrollingModule
+    ScrollingModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
