@@ -25,7 +25,7 @@ export class RegistrationComponent implements OnInit {
 
   newAccount(): void {
     this.registrationService.newAccount(this.account).subscribe()
-    //this.router.navigate(['/login'])
+    this.router.navigate(['/login'])
   }
 
 }
