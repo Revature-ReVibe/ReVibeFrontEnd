@@ -1,0 +1,82 @@
+<!-- .container-fluid is from https://getbootstrap.com/docs/3.3/css/#overview-container -->
+
+<div class="container-fluid">
+
+  <!-- submission feedback -->
+  <div class="submission-conf" [hidden]="!submitted" style="margin-left: 4px">
+    <h4>your submission: </h4>
+
+    <p><strong>Required field</strong></p>
+    <p>{{ model.name }}</p>
+
+    <p><strong>Fill form field</strong></p>
+    <p>{{ model.fieldTwo }}</p>
+
+    <p><strong>Outline form field</strong></p>
+    <p>{{ model.fieldTwo }}</p>
+
+    <p><strong>selected</strong></p>
+    <p>{{ model.option }}</p>
+
+
+    <button mat-stroked-button color="primary" (click)="submitted=false">Edit</button>
+
+  </div>
+
+
+  <h1>Form Header</h1>
+  <form (ngSubmit)="onSubmit()" #UserForm="ngForm">
+    <div class="row">
+
+      <mat-form-field appearance="standard">
+        <mat-label>Required field</mat-label>
+        <input  matInput placeholder="placeholder" id="name"
+        required
+        [(ngModel)]="model.name" name="name"
+        #name="ngModel">
+
+      </mat-form-field>
+
+
+<!-- non-required field with different appearance from above  (fill not standard)  -->
+
+      <mat-form-field appearance="fill">
+        <mat-label>Fill form field</mat-label>
+        <input matInput placeholder="placeholder"  id="fieldTwo"
+        [(ngModel)]= "model.fieldTwo" name="fieldTwo">
+      </mat-form-field>
+
+
+<!-- yet another appearance -->
+
+      <mat-form-field appearance="outline">
+        <mat-label>Outline form field</mat-label>
+        <input matInput placeholder="placeholder"
+        id="fieldTwo"
+        [(ngModel)]= "model.fieldTwo" name="fieldTwo">
+      </mat-form-field>
+
+
+<!-- drop down required w/ fill appearance -->
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select required
+      [(ngModel)]= "model.option" name="option">
+
+        <mat-option *ngFor="let pow of options" [value]="pow">{{pow}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+
+    <!-- buttons -->
+    <!-- submits with feedback -->
+    <button mat-stroked-button (click)="newUser(); UserForm.reset()">Submit</button>
+
+    <!-- checks if required fields are ok before activated status -->
+    <button mat-stroked-button color="warn" type="submit"
+    [disabled]="!UserForm.form.valid">submit*</button>
+
+   </div>
+ </form>
+</div>
