@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from 'src/app/service/login.service';
+import { LoginService } from 'src/app/service/loginService/login.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    this.loginService.login(this.f.username.value, this.f.password.value).subscribe();
+    this.loginService.login(this.f.username.value, this.f.password.value).subscribe(user => {
+
+    });
   }
 
   newAccount(){
