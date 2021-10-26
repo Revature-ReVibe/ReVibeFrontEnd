@@ -1,0 +1,17 @@
+<div class="center" id="div-login-component">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div id="div-login-fields">
+            Username: <input type="text" formControlName="username" id="input-login-username"><br>
+            Password: <input type="password" formControlName="password" id="input-login-password"><br>
+        </div>
+        <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
+        <button id="button-login-submit" (click)="login()">Login</button><br>
+    </form>
+    <!-- Filler line break -->
+    <pre>
+  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
+ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
+`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   </pre>
+    
+    <i><button id="button-login-newAccount" (click)="newAccount()">Create new account</button></i><br>
+</div>
