@@ -4,15 +4,13 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { loginObj } from '../Models/loginObj';
-import { RefrenceSheet } from '../Models/oneRefrenceSheetToRuleThemAll';
-import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
   // this needs to be changed based on the backend
-  // RefrenceSheet.getUrl() is just "http://localhost:8080"
+  // environment.serverLocationURL is just "http://localhost:8080" at the moment
   private url:String = environment.serverLocationURL;
   private currentUserSubject: BehaviorSubject<loginObj>;
   public currentUser: Observable<loginObj>;
