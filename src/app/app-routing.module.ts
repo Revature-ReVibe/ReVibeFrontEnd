@@ -7,12 +7,26 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegistrationComponent } from "./components/registration/registration.component";
+import { GeneralFormComponent } from "./general-form/general-form.component";
 
 const routes: Routes = [
-    {path: "", component: HomeComponent},
-    {path: "login", component: LoginComponent},
+    {
+      path: "",
+      component: HomeComponent
+    },
+    {
+      path: "login",
+      component: LoginComponent
+    },
 
-    {path: "registration",component: RegistrationComponent}
+    {
+      path: "registration",
+      component: RegistrationComponent
+    },
+    {
+      path: "form",
+      component: GeneralFormComponent
+    }
 ];
 
 @NgModule({imports:[RouterModule.forRoot(routes)], exports:[RouterModule]})
