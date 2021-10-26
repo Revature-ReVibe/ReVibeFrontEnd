@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/login.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { LoginService } from 'src/app/service/login.service';
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
 
-  constructor(private loginService:LoginService, private formBuilder:FormBuilder) {
+  constructor(private loginService:LoginService, private formBuilder:FormBuilder,  private router: Router) {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   newAccount(){
-    // TODO: link to the new account location
+    this.router.navigate(['/registration'])
   }
 
 }
