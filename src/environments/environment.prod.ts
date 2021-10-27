@@ -1,5 +1,6 @@
 export const environment = {
-  production: true
-  //this will override environment ts when put on ec2/ s3 bucket
-  //place ec2 endpoints
+  production: true,
+  //set up localhost endpoints here
+  submitForm: "http://54.221.18.214:8088/"
+  
 };
