@@ -24,7 +24,7 @@ import { MatCardModule } from "@angular/material/card";
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient} from '@angular/common/http';
-
+import { VibeComponent } from './vibe/vibe.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -34,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
-import { LoginService } from './service/loginService/login.service';
+import { LoginService } from './service/login.service';
+
 import { GeneralFormComponent } from './general-form/general-form.component';
 
 @NgModule({
