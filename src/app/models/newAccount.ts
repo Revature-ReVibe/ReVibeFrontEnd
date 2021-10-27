@@ -1,4 +1,4 @@
-export interface Account{
+export interface newAccount{
     userId?: number;
     email: string;
     username: string;
