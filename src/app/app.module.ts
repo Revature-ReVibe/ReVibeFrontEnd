@@ -27,8 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
-import { LoginService } from './service/loginService/login.service';
 import { VibeComponent } from './vibe/vibe.component';
+import { LoginService } from './service/login.service';
 import { GeneralFormComponent } from './general-form/general-form.component';
 
 @NgModule({
