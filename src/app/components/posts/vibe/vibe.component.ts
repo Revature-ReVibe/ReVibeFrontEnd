@@ -8,10 +8,8 @@ import { Account } from '../../../models/Account';
 })
 export class VibeComponent implements OnInit {
 
-  // inputAccount: Account = new Account('ORLY', 'NOWAI');
-  inputAccount: Account = {id: 1, username: 'ORLY', password: 'NOWAI', name: 'ORLY'};
-  // fillerAccount: Account = new Account('YARLY', 'SRSLY');
-  fillerAccount: Account = {id: 2, username: 'YARLY', password: 'SRSLY', name: 'YARLY'};
+  inputAccount: Account = new Account('ORLY', 'NOWAI', '');
+  fillerAccount: Account = new Account('YARLY', 'SRSLY', '');
 
   inputAccountArray: Account[] = [
     this.inputAccount,
