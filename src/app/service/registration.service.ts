@@ -1,4 +1,4 @@
-import { Account } from './../models/Account';
+import { newAccount } from '../models/newAccount';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -15,8 +15,8 @@ export class RegistrationService {
 
   url: string = 'http://localhost:8080/account/new';
 
-  newAccount(account: Account): Observable<Object> {
+  newAccount(account: newAccount): Observable<Object> {
     console.log(account);
-    return this.http.post<Account>(this.url, account, this.httpOptions);
+    return this.http.post<newAccount>(this.url, account, this.httpOptions);
   }
 }

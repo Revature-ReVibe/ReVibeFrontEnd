@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 
 import { RegistrationService } from './registration.service';
 import { HttpClient } from '@angular/common/http';
-import { Account } from '../models/Account';
+import { newAccount } from '../models/newAccount';
 
 describe('RegistrationService', () => {
   let service: RegistrationService;
