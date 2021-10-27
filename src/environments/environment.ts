@@ -2,8 +2,6 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import { HttpClient } from "@angular/common/http";
-
 export const environment = {
   production: false,
   //set up localhost endpoints here

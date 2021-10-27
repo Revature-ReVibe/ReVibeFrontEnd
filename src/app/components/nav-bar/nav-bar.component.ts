@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   signout(event:Event){
     event.preventDefault();
     this.logout.signout();
