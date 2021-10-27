@@ -1,6 +1,6 @@
-import { RegistrationService } from './../../service/registration.service';
-import { Component, OnInit } from '@angular/core';
-import { Account } from 'src/app/models/Account';
+import {RegistrationService} from './../../service/registration.service';
+import {Component, OnInit} from '@angular/core';
+import {Account} from 'src/app/models/Account';
 
 @Component({
   selector: 'app-registration',

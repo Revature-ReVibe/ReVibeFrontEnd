@@ -1,8 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from 'src/app/models/User';
-import { AccountService } from '../account.service';
-import { LoginService } from '../login.service';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
+import {LoginService} from '../login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,14 +8,14 @@ import { LoginService } from '../login.service';
 export class LogoutService {
 
   isloggedIn=false;
-  
-  
-  
+
+
+
 
   constructor(private router:Router, private login:LoginService) { }
 
 
- 
+
 
   signout(){
     this.isloggedIn=false;
