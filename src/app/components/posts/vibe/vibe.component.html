@@ -1,0 +1,20 @@
+<mat-card class="vibe-card">
+
+    <mat-card-header>
+        <img mat-card-avatar src= {{inputVibe.vibePic}}>
+        <mat-card-title>{{inputVibe.poster.username}}</mat-card-title>
+    </mat-card-header>
+
+      <img mat-card-image src= {{inputVibe.vibePic}} >
+
+    <mat-card-content>
+        <p>
+            {{inputVibe.vibeMessage}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-footer>
+        {{inputVibe.likes.length}} people checked this Vibe.
+    </mat-card-footer>
+
+</mat-card>

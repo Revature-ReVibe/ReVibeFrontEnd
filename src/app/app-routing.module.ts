@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { GeneralFeedComponent } from "./components/posts/feeds/general-feed/general-feed.component";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { Routes } from "@angular/router";
@@ -20,6 +21,13 @@ const routes: Routes = [
     },
 
     {
+        path: "account",
+        component: AccountComponent,
+    },
+
+    {
+        path: "feed",
+        component: GeneralFeedComponent
       path: "registration",
       component: RegistrationComponent
     },
