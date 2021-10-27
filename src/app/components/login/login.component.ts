@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   newAccount(){
-    this.router.navigate(['/registration'])
+    this.router.navigateByUrl("/registration");
   }
 
 }

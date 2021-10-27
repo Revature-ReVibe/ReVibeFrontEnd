@@ -1,5 +1,6 @@
 <div class="newaccountform" id="newAccount">
   <form #accountform="ngForm">
+<<<<<<< HEAD
     <div class="container">
       <div class="row">
         <mat-form-field>
@@ -77,5 +78,30 @@
       </button>
       </div>
     </div>
+=======
+    <!--
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input id="nameInput" matInput placeholder="Name" type="text"
+      [(ngModel)]="account.name"
+      name="name"
+      #name="ngModel">
+    </mat-form-field>-->
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input id="usernameInput" matInput placeholder="Username" type="text"
+      [(ngModel)]="account.username"
+      name="username"
+      #name="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input id="passwordInput" matInput placeholder="Name" type="text"
+      [(ngModel)]="account.password"
+      name="password"
+      #name="ngModel">
+    </mat-form-field>
+    <button type="submit" (click)="newAccount()">Submit</button>
+>>>>>>> main
   </form>
 </div>
