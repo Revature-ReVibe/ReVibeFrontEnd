@@ -22,10 +22,10 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.sub = this.activatedRoute.params.subscribe((params: { [x: string]: string; }) =>{
-      this.username = params['username'];
-      this.userService.findUser(this.username).pipe(map((user:User) => this.user = user)).subscribe()
-    });
+      //this.sub = this.activatedRoute.params.subscribe((params: { [x: string]: string; }) =>{
+      //this.username = params['username'];
+      //this.userService.findUser(this.username).pipe(map((user:User) => this.user = user)).subscribe()
+    //});
   }
 
   ngOnDestroy(){

@@ -14,12 +14,13 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  account: Account = {
-    id: 0,
-    username: '',
-    password: '',
-    name: ''
-  }
+  account = new Account("username","password",'token') 
+  //account: Account = {
+    //id: 0,
+  //  username: '',
+  //  password: ''
+    //name: ''
+ // }
 
   newAccount(): void {
     this.registrationService.newAccount(this.account).subscribe()
