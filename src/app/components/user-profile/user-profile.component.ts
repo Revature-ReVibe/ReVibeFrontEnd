@@ -11,11 +11,11 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class UserProfileComponent implements OnInit {
 
-  username: string = " ";
-  user: User | undefined;
-  private sub: Subscription = new Subscription;
-  activatedRoute: any;
-  userService: any;
+  username: string = "username ";
+  user = new User("username", "name", "email@email", "password", 1, " ");
+  // private sub: Subscription = new Subscription;
+  // activatedRoute: any;
+  // userService: any;
   
 
 
@@ -29,7 +29,7 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnDestroy(){
-    this.sub.unsubscribe();
+    // this.sub.unsubscribe();
   }
 
 }
