@@ -21,5 +21,4 @@ export class UserFeedComponent implements OnInit {
       this.vibes.push(newVibe);
     }
   }
-
 }

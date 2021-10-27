@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Vibe } from 'src/app/models/Vibe';
-import { Account } from 'src/app/models/Account';
-
+import { Vibe } from '../../../models/Vibe';
+import { Account } from '../../../models/Account';
 @Component({
   selector: 'app-vibe',
   templateUrl: './vibe.component.html',
