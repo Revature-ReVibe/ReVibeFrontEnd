@@ -24,9 +24,7 @@ import { MatCardModule } from "@angular/material/card";
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient} from '@angular/common/http';
-import { VibeComponent } from './vibe/vibe.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //import { AccountComponent } from './components/account/account.component';
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,9 +32,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
-import { LoginService } from './service/login.service';
 
 import { GeneralFormComponent } from './general-form/general-form.component';
+import { LoginService } from './service/login.service';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { EventsComponent } from './components/events/events.component';
+import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
+import { MemberComponent } from './components/member/member.component';
 
 @NgModule({
   declarations: [
@@ -47,22 +50,30 @@ import { GeneralFormComponent } from './general-form/general-form.component';
     VibeComponent,
     GeneralFeedComponent,
     UserFeedComponent,
-    FeedComponent
+    FeedComponent,
     LoginComponent,
     RegistrationComponent,
-    GeneralFormComponent
+    GeneralFormComponent,
+    VibeComponent,
+    UserProfileComponent,
+    SidebarComponent,
+    EventsComponent,
+    VibeSessionComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ScrollingModule,
-    MatCardModule
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    MatCardModule
   ],
   providers: [LoginService, LogoutService],
   bootstrap: [AppComponent]
