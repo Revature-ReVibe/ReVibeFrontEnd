@@ -8,6 +8,8 @@ import {MatDialogRef} from "@angular/material/dialog";
 })
 export class NewVibeComponent implements OnInit {
 
+  takeImage: boolean = false;
+
   constructor(public dialogRef: MatDialogRef<NewVibeComponent>) { }
 
   ngOnInit(): void {
@@ -16,6 +18,10 @@ export class NewVibeComponent implements OnInit {
 
   submitVibe() {
 
+  }
+
+  toggleImageField() {
+    this.takeImage = !this.takeImage;
   }
 
 }

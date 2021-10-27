@@ -7,15 +7,18 @@
   </mat-card-title>
   <mat-card-content>
     <form>
-      <mat-form-field appearance="fill">
-        <textarea matInput placeholder="What's up?"></textarea>
+      <mat-form-field appearance="fill" >
+        <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="5" placeholder="What's up?"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill" *ngIf="takeImage">
+        <input matInput type="text" placeholder="Image URL"/>
       </mat-form-field>
     </form>
-    <mat-card-actions>
-      <button mat-icon-button>
-        <mat-icon>insert_photo</mat-icon>
-      </button>
-      <button mat-raised-button (click)="submitVibe()">Submit</button>
-    </mat-card-actions>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button matTooltip="Insert Image" (click)="toggleImageField()">
+      <mat-icon>insert_photo</mat-icon>
+    </button>
+    <button mat-raised-button (click)="submitVibe()">Submit</button>
+  </mat-card-actions>
 </mat-card>

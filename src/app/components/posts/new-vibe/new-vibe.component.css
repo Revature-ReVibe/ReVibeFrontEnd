@@ -1,12 +1,13 @@
 mat-card-content {
   width: 100%;
+  text-align: center;
 }
 
 mat-card-actions {
   display: flex;
-  align-content: flex-end;
+  justify-content: flex-end;
 }
 
-textarea {
-  width: 100%
+mat-form-field, textarea {
+  width: 90%;
 }

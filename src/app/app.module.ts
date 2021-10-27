@@ -36,6 +36,7 @@ import {LogoutService} from './service/logoutService/logout.service';
 import {LoginService} from './service/login.service';
 
 import {GeneralFormComponent} from './general-form/general-form.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {GeneralFormComponent} from './general-form/general-form.component';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MaterialModule
+    MaterialModule,
+    MatTooltipModule
   ],
   providers: [LoginService, LogoutService],
   bootstrap: [AppComponent]

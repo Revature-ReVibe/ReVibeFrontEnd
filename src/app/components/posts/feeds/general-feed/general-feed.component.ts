@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Vibe } from "../../../../models/Vibe";
-import { Account } from "../../../../models/Account";
+import {Component, OnInit} from '@angular/core';
+import {Vibe} from "../../../../models/Vibe";
 import {MatDialog} from "@angular/material/dialog";
 import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
 
-  const postCount: number = 100;
+const postCount: number = 100;
 
 @Component({
   selector: 'app-general-feed',
@@ -18,7 +17,7 @@ export class GeneralFeedComponent implements OnInit {
   constructor(public dialog: MatDialog) {
     //Dummy data, should be replaced with fetching data from server (get all posts)
     for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, new Account('uname', 'pwrd'), 'Message', []);
+      let newVibe: Vibe = new Vibe(i, {id: 1, username: 'uname', password: 'pwrd', name: 'name'}, 'Message', []);
       this.vibes.push(newVibe);
     }
   }
