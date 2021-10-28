@@ -11,7 +11,8 @@ import { LoginService } from 'src/app/service/login.service';
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
 
-  constructor(private loginService:LoginService, private formBuilder:FormBuilder, private rout:Router) {
+
+  constructor(private loginService:LoginService, private formBuilder:FormBuilder,  private router: Router) {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -27,11 +28,13 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    this.loginService.login(this.f.username.value, this.f.password.value).subscribe();
+    this.loginService.login(this.f.username.value, this.f.password.value).subscribe(user => {
+
+    });
   }
 
   newAccount(){
-    this.rout.navigateByUrl("/registration");
+    this.router.navigateByUrl("/registration");
   }
 
 }

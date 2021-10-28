@@ -41,15 +41,11 @@ import { EventsComponent } from './components/events/events.component';
 import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
 import { MemberComponent } from './components/member/member.component';
 
-////
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
-
-
 
 @NgModule({
   declarations: [
