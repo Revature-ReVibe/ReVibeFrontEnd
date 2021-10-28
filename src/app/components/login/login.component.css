@@ -1,3 +1,35 @@
-.center {
-    text-align: center;
+body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height:100vh;
+    overflow: hidden;
 }
+mat-card{
+    width: 30%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+   
+}
+.loginText{
+   justify-content: center;
+}
+input {
+    width: 100%;
+    padding:0 20px;
+    height:40px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+button{
+    box-shadow:  3px 3px 3px green;;
+    width: 100%;
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+
+
+

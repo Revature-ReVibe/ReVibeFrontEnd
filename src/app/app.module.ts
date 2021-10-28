@@ -41,6 +41,11 @@ import { VibeSessionComponent } from './components/vibe-session/vibe-session.com
 import { MemberComponent } from './components/member/member.component';
 import { LoginService } from './service/loginService/login.service';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +79,11 @@ import { LoginService } from './service/loginService/login.service';
     MaterialModule,
     FormsModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule
+
   ],
   providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
   bootstrap: [AppComponent],
