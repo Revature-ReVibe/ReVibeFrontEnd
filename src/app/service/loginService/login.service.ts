@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { loginObj } from '../../Models/loginObj';
+import { loginObj } from '../../models/loginObj';
 
 @Injectable({
   providedIn: 'root'
@@ -25,11 +25,16 @@ export class LoginService {
 
 
   login(username: string, password: string): Observable<string> {
-    return this.http.post<string>(this.url + `/login`, { username, password })
-        .pipe(map(jwt => {
+    return this.http.post<any>(this.url + `/login`, { username, password })
+        .pipe(map(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('ReVibeSocialMediaApp-LocalStorageLocation', JSON.stringify(jwt));
+            localStorage.setItem('ReVibeSocialMediaApp-LocalStorageLocation', user.jwt);
+            this.currentUserSubject.next(user);
             return "other";
         }));
+  }
+
+  next(){
+    this.currentUserSubject.next(new loginObj);
   }
 }

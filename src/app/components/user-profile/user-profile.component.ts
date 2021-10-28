@@ -25,6 +25,7 @@ export class UserProfileComponent implements OnInit {
       //this.username = params['username'];
       //this.userService.findUser(this.username).pipe(map((user:User) => this.user = user)).subscribe()
     //});
+    this.getUser();
   }
 
   ngOnDestroy(){
@@ -33,7 +34,7 @@ export class UserProfileComponent implements OnInit {
 
   getUser()
   {
-    return this.userService.getUser();
+    return this.userService.getUser().subscribe();
   }
 
 }
