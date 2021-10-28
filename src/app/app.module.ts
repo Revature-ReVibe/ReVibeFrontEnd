@@ -1,13 +1,13 @@
+import { JWT_Interceptor } from './interceptors/jwt-interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // this is the only material-related import here.
 // for mat-specific ones, go to material.module!
 import { MaterialModule } from './material/material.module';
-
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -19,12 +19,11 @@ import { GeneralFeedComponent } from './components/posts/feeds/general-feed/gene
 import { UserFeedComponent } from './components/posts/feeds/user-feed/user-feed.component';
 import { FeedComponent } from './components/posts/feeds/feed/feed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ScrollingModule } from "@angular/cdk/scrolling";
-import { MatCardModule } from "@angular/material/card";
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClient} from '@angular/common/http';
-
+import { HttpClient } from '@angular/common/http';
 
 //import { AccountComponent } from './components/account/account.component';
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -59,7 +58,7 @@ import { MemberComponent } from './components/member/member.component';
     SidebarComponent,
     EventsComponent,
     VibeSessionComponent,
-    MemberComponent
+    MemberComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,9 +72,9 @@ import { MemberComponent } from './components/member/member.component';
     FormsModule,
     MaterialModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
   ],
-  providers: [LoginService, LogoutService],
-  bootstrap: [AppComponent]
+  providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
