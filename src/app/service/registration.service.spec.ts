@@ -24,13 +24,12 @@ describe('RegistrationService', () => {
   });
 
   it('should send account in post request', () => {
-    const testData: Account = {
-      id: 0,
+    const testData: newAccount = {
       email: '',
       username: '',
       password: '',
       name: '',
-      profilepic: '',
+      profilePic: '',
     };
 
     service.newAccount(testData).subscribe(data =>
