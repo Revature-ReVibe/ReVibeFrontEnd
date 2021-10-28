@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JWT_Interceptor } from './jwt-interceptor';
 import { TestBed } from '@angular/core/testing';
 import {
@@ -21,7 +21,7 @@ describe(`AuthHttpInterceptor`, () => {
       providers: [
         RegistrationService,
         {
-          provide: JWT_Interceptor,
+          provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true,
           HttpClient
         },
       ],

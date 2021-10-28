@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // this is the only material-related import here.
 // for mat-specific ones, go to material.module!
@@ -74,7 +74,7 @@ import { MemberComponent } from './components/member/member.component';
     FormsModule,
     MatCardModule,
   ],
-  providers: [LoginService, LogoutService, JWT_Interceptor],
+  providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
