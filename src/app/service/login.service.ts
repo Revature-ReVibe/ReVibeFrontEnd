@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { loginObj } from '../Models/loginObj';
+import { loginObj } from '../models/loginObj';
 
 @Injectable({
   providedIn: 'root'
