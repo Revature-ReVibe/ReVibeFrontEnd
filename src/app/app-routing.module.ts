@@ -12,6 +12,7 @@ import { GeneralFormComponent } from "./general-form/general-form.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
 import { EventsComponent } from "./components/events/events.component";
 import { VibeSessionComponent } from "./components/vibe-session/vibe-session.component";
+import { ResetPasswordComponent } from "./components/reset-password/reset-password.component";
 
 const routes: Routes = [
     {
@@ -48,6 +49,11 @@ const routes: Routes = [
     {
       path: "vibe-session",
       component: VibeSessionComponent
+    },
+
+    {
+      path: "reset-password",
+      component: ResetPasswordComponent
     }
 ];
 
