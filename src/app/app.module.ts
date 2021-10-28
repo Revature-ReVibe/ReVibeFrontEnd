@@ -43,7 +43,6 @@ import { MemberComponent } from './components/member/member.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
@@ -82,7 +81,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    FlexLayoutModule,
     MatToolbarModule
 
   ],

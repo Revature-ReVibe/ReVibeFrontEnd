@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { loginObj } from '../Models/loginObj';
-import { RefrenceSheet } from '../Models/oneRefrenceSheetToRuleThemAll';
-import { User } from '../models/User';
+import { loginObj } from '../models/loginObj';
 
 @Injectable({
   providedIn: 'root'
@@ -29,10 +27,8 @@ export class LoginService {
 
 
   login(username: string, password: string): Observable<string> {
-    console.log(username);
     return this.http.post<any>(this.url + `/jwt/login`, { username, password })
         .pipe(map(user => {
-          console.log(user)
           
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem('ReVibeSocialMediaApp-LocalStorageLocation', JSON.stringify(user));

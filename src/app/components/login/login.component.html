@@ -1,26 +1,30 @@
 
-<div class ="center" id="div-login-component" fxLayoutAlign="center center" fxFlexFill>
-    <mat-card fxFlex="25">
-        <mat-toolbar color="primary">Login Page</mat-toolbar>
-        <form [formGroup]="loginForm" (ngSubmit)="login()" fxLayoutAlign="stretch" fxLayout="column">
-            
-            <div id="div-login-fields" fxLayout="column">
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Username" formControlName="username" id="input-login-username">
+<body>
+    <div class ="center" id="div-login-component">
+        <mat-card>
+            <mat-toolbar class="loginText" color="primary">Login Page</mat-toolbar>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                
+                <div id="div-login-fields">
+                    <mat-form-field>
+                        <input class="uField" type="text" matInput placeholder="Username" formControlName="username" id="input-login-username">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input  class="pFeild" type="password" matInput placeholder="Password" formControlName="password" id="input-login-password" ><br>
                 </mat-form-field>
-                <mat-form-field>
-                <input type="password" matInput placeholder="Password" formControlName="password" id="input-login-password" ><br>
-            </mat-form-field>
-            </div>
-            <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
-            <button id="button-login-submit" (click)="login()">Login</button><br>
-            <button id="button-login-newAccount" (click)="newAccount()">Create new account</button><br>
-        </form>
-        <!-- Filler line break -->
+                </div>
+                <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
+                <button id="button-login-submit" (click)="login()">Login</button><br>
+                <button id="button-login-newAccount" (click)="newAccount()">Create new account</button><br>
+            </form>
+        
+    </mat-card>
+    </div>
+</body>
+
+ <!-- Filler line break -->
         <!-- <pre>
     .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
     / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
     `-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   `-`-'   </pre> -->   
        
-</mat-card>
-</div>
