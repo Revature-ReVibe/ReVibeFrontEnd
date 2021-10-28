@@ -13,8 +13,10 @@
                     <input  class="pFeild" type="password" matInput placeholder="Password" formControlName="password" id="input-login-password" ><br>
                 </mat-form-field>
                 </div>
-                <i><a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a></i><br>
                 <button id="button-login-submit" (click)="login()">Login</button><br>
+                <div class="fpassword">
+                    <a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a><br>
+                </div>
                 <button id="button-login-newAccount" (click)="newAccount()">Create new account</button><br>
             </form>
         

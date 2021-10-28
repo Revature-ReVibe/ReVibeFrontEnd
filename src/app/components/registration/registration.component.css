@@ -1,3 +1,44 @@
-.newaccountform {
+/* .newaccountform {
   text-align: center;
+} */
+
+body{
+  margin:0;
+  padding:0;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  height:100vh;
+  overflow: hidden;
+}
+mat-card{
+  width: 30%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+ 
+}
+mat-toolbar{
+  justify-content: center;
+}
+mat-form-field{
+  margin-top: 5%;
+    left:50%;
+    transform: translate(-50%);
+    padding:0 20px;
+    height:40px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.container{
+  width: 100%;
+}
+
+button{
+  box-shadow:  3px 3px 3px green;;
+  width: 100%;
+  margin-top: 10%;
+  font-weight: bold;
+  padding:10px;
+  font-size: large;
+  border-radius: 5px;
 }
