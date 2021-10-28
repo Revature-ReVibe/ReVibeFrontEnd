@@ -12,7 +12,7 @@ import { UserService } from 'src/app/service/user.service';
 export class UserProfileComponent implements OnInit {
 
   username: string = "username ";
-  user = new User("username", "name", "email@email", "password", 1, " ");
+  user = new User("username", "name", "email@email", "https://mefunny-test-bucket.s3.amazonaws.com/1634357235922_orly.jpg", 1, " ");
   // private sub: Subscription = new Subscription;
   // activatedRoute: any;
   // userService: any;
