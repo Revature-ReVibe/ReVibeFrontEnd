@@ -15,7 +15,6 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   account: newAccount = {
     email: '',
     username: '',

@@ -15,21 +15,26 @@ export class UserProfileComponent implements OnInit {
   user: User | undefined;
   private sub: Subscription = new Subscription;
   activatedRoute: any;
-  userService: any;
   
 
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
       //this.sub = this.activatedRoute.params.subscribe((params: { [x: string]: string; }) =>{
       //this.username = params['username'];
       //this.userService.findUser(this.username).pipe(map((user:User) => this.user = user)).subscribe()
     //});
+    this.getUser();
   }
 
   ngOnDestroy(){
     this.sub.unsubscribe();
+  }
+
+  getUser()
+  {
+    return this.userService.getUser().subscribe();
   }
 
 }

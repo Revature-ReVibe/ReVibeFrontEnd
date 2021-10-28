@@ -33,12 +33,13 @@ import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
 
 import { GeneralFormComponent } from './general-form/general-form.component';
-import { LoginService } from './service/login.service';
+
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EventsComponent } from './components/events/events.component';
 import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
 import { MemberComponent } from './components/member/member.component';
+import { LoginService } from './service/loginService/login.service';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
