@@ -12,7 +12,7 @@ import { UserService } from 'src/app/service/user.service';
 export class UserProfileComponent implements OnInit {
 
   username: string = " ";
-  user: User | undefined;
+  user = new User("changedUsername", "changedname", "changedname@changedemail.com", "changedURL", 1738, "changedpassword")
   private sub: Subscription = new Subscription;
   activatedRoute: any;
   
