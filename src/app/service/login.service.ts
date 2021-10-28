@@ -29,8 +29,11 @@ export class LoginService {
 
 
   login(username: string, password: string): Observable<string> {
-    return this.http.post<any>(this.url + `/login`, { username, password })
+    console.log(username);
+    return this.http.post<any>(this.url + `/jwt/login`, { username, password })
         .pipe(map(user => {
+          console.log(user)
+          
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem('ReVibeSocialMediaApp-LocalStorageLocation', JSON.stringify(user));
             this.currentUserSubject.next(user);

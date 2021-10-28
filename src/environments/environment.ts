@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export const environment = {
   production: false,
   //set up localhost endpoints here
-  serverLocationURL: "http://localhost:8080"
+  serverLocationURL: "http://localhost:8088"
   
   //submitForm = http://localhost8080
 
