@@ -2,6 +2,7 @@ import { RegistrationService } from './../../service/registration.service';
 import { Component, OnInit } from '@angular/core';
 import { newAccount } from 'src/app/models/newAccount';
 import { Router } from '@angular/router';
+import {Account} from 'src/app/models/Account';
 
 @Component({
   selector: 'app-registration',

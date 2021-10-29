@@ -11,14 +11,14 @@ import { LoginService } from '../loginService/login.service';
 export class LogoutService {
 
   isloggedIn=false;
-  
-  
-  
+
+
+
 
   constructor(private router:Router, private login:LoginService) { }
 
 
- 
+
 
   signout(){
     this.isloggedIn=false;
