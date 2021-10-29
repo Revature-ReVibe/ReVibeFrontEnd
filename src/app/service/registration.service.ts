@@ -1,25 +1,23 @@
-import {Account} from './../models/Account';
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { newAccount } from '../models/newAccount';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RegistrationService {
-
   public httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient,) {
-   }
+  constructor(private http: HttpClient) {}
 
-   url: string = 'http://localhost:8080/account/new';
+  url: string = environment.submitForm+"/account/new";
 
-   newAccount(account: Account): Observable<Object> {
-     console.log(account);
-     return this.http.post<Account>(this.url,account,this.httpOptions)
-   }
-
+  newAccount(account: newAccount): Observable<Object> {
+    console.log(account);
+    return this.http.post<newAccount>(this.url, account, this.httpOptions);
+  }
 }

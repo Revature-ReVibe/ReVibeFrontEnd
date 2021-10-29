@@ -1,22 +1,26 @@
 <h1>USER PROFILE PAGE</h1>
-<app-sidebar></app-sidebar>
-<app-general-feed></app-general-feed>
+<!-- <app-general-feed></app-general-feed> -->
 
-<!--
-<div *ngIf="user" class="main-div">
+
+<!--<div *ngIf="user" class="main-div">-->
+    <app-sidebar></app-sidebar>
+
+    <div>
     <mat-card class="card">
         <mat-card-header>
-            <div mat-card-avatar>
+            <!-- <div mat-card-avatar>
                 <img class="header-image">
-            </div>
-            <mat-card-title>{{user.name}}</mat-card-title>
-            <mat-card-subtitle>{{user.email}}</mat-card-subtitle> 
+            </div> -->
+            <img mat-card-xl-image src={{user.profilePic}}>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content id="username">
+            <mat-card-title id="name">{{user.name}}</mat-card-title>
+            <mat-card-subtitle id="email">{{user.email}}</mat-card-subtitle> 
             <p>Username: {{user.username}}</p>
         </mat-card-content>
+        <!-- <a routerLink=""></a> -->
+        <button routerLink="/form" mat-flat-button>Edit</button>
     </mat-card>
-</div>    
--->
-
-
+    </div>
+    <!--</div>     -->
+    

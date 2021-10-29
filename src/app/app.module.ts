@@ -1,13 +1,18 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from './app-routing.module';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import { JWT_Interceptor } from './interceptors/jwt-interceptor';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 // this is the only material-related import here.
 // for mat-specific ones, go to material.module!
 import {MaterialModule} from './material/material.module';
 
+
+
+
+import { ReactiveFormsModule } from '@angular/forms';
 import {AppComponent} from './app.component';
 import {RegistrationComponent} from './components/registration/registration.component';
 
@@ -35,11 +40,12 @@ import { HttpClient} from '@angular/common/http';
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {LogoutService} from './service/logoutService/logout.service';
-import {LoginService} from './service/login.service';
+import {LoginService} from './service/loginService/login.service';
 
 import { AccountService } from './service/account.service';
 
 import { GeneralFormComponent } from './general-form/general-form.component';
+
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EventsComponent } from './components/events/events.component';
@@ -92,7 +98,7 @@ import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-fe
     MaterialModule,
     MatTooltipModule
   ],
-  providers: [LoginService, LogoutService],
-  bootstrap: [AppComponent]
+  providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,7 @@
-import {RegistrationService} from './../../service/registration.service';
-import {Component, OnInit} from '@angular/core';
+import { RegistrationService } from './../../service/registration.service';
+import { Component, OnInit } from '@angular/core';
+import { newAccount } from 'src/app/models/newAccount';
+import { Router } from '@angular/router';
 import {Account} from 'src/app/models/Account';
 
 @Component({
@@ -9,21 +11,22 @@ import {Account} from 'src/app/models/Account';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private registrationService: RegistrationService) { }
+  constructor(private registrationService: RegistrationService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  account = new Account("username","password",'token') 
-  //account: Account = {
-    //id: 0,
-  //  username: '',
-  //  password: ''
-    //name: ''
- // }
+  account: newAccount = {
+    email: '',
+    username: '',
+    password: '',
+    name: '',
+    profilePic: '',
+  }
 
   newAccount(): void {
     this.registrationService.newAccount(this.account).subscribe()
+    this.router.navigate(['/login'])
   }
 
 }
