@@ -1,1 +1,8 @@
-<p>reply-feed works!</p>
+<mat-card>
+  <mat-card-title>
+    <app-vibe [inputVibe]="parentVibe"></app-vibe>
+  </mat-card-title>
+  <mat-card-content>
+    <app-feed [posts]="replies"></app-feed>
+  </mat-card-content>
+</mat-card>
