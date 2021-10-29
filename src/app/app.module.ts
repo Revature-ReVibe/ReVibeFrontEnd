@@ -40,11 +40,7 @@ import { EventsComponent } from './components/events/events.component';
 import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
 import { MemberComponent } from './components/member/member.component';
 import { LoginService } from './service/loginService/login.service';
-
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +61,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EventsComponent,
     VibeSessionComponent,
     MemberComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,11 +76,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MaterialModule,
     FormsModule,
     MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatToolbarModule
-
   ],
   providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
   bootstrap: [AppComponent],
