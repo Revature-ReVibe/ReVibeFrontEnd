@@ -9,7 +9,8 @@ export const environment = {
   //set up localhost endpoints here
   submitForm: "http://localhost:8088",
   serverLocationURL: "http://localhost:8088",
-  getUser : "http://localhost:8088/account/findbyId"
+  getUser : "http://localhost:8088/account/findbyId",
+  updateUser : "http://localhost:8088/account/updateprofile"
   
   //submitForm = http://localhost8080
 
