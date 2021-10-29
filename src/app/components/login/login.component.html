@@ -1,4 +1,3 @@
-
 <body>
     <div class ="center" id="div-login-component">
         <mat-card>
@@ -15,7 +14,7 @@
                 </div>
                 <button id="button-login-submit" (click)="login()">Login</button><br>
                 <div class="fpassword">
-                    <a id="button-login-forgotPassword" routerLink="PLACEHOLDER">Forgot Password?</a><br>
+                    <a id="button-login-forgotPassword" [routerLink]="['/reset-password']">Forgot Password?</a><br>
                 </div>
                 <button id="button-login-newAccount" (click)="newAccount()">Create new account</button><br>
             </form>
