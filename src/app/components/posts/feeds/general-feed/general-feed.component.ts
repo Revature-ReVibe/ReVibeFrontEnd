@@ -4,7 +4,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
 import {Account} from "../../../../models/Account";
 
-const postCount: number = 100;
+const postCount: number = 30;
 
 @Component({
   selector: 'app-general-feed',

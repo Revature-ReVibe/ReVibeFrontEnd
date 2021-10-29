@@ -46,6 +46,7 @@ import { EventsComponent } from './components/events/events.component';
 import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
 import { MemberComponent } from './components/member/member.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-feed.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     SidebarComponent,
     EventsComponent,
     VibeSessionComponent,
-    MemberComponent
+    MemberComponent,
+    ReplyFeedComponent
   ],
   imports: [
     BrowserModule,
