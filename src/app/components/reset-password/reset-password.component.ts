@@ -22,7 +22,11 @@ export class ResetPasswordComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.resetForm.controls; }
 
-    account: newAccount = {
+  ngOnInit(): void {
+  }
+
+  resetPassword(){
+    let account: newAccount = {
       email: this.f.email.value,
       username: '',
       password: '',
@@ -30,11 +34,7 @@ export class ResetPasswordComponent implements OnInit {
       profilePic: '',
     }
 
-  ngOnInit(): void {
-  }
-
-  resetPassword(){
-    this.resetService.resetPassword(this.account).subscribe(user => {
+    this.resetService.resetPassword(account).subscribe(user => {
 
     });
     this.router.navigateByUrl("/login")
