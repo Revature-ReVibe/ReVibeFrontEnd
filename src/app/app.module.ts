@@ -24,12 +24,6 @@ import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
-//import { AccountComponent } from './components/account/account.component';
-//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-import { AccountService } from './service/account.service';
 import { LogoutService } from './service/logoutService/logout.service';
 
 import { GeneralFormComponent } from './general-form/general-form.component';
@@ -41,29 +35,38 @@ import { VibeSessionComponent } from './components/vibe-session/vibe-session.com
 import { MemberComponent } from './components/member/member.component';
 import { LoginService } from './service/loginService/login.service';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { NewVibeComponent } from './components/posts/new-vibe/new-vibe.component';
+import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-feed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    //AccountComponent,
     NavBarComponent,
     HomeComponent,
     VibeComponent,
     GeneralFeedComponent,
     UserFeedComponent,
     FeedComponent,
+    NewVibeComponent,
+    ResetPasswordComponent,
     LoginComponent,
     RegistrationComponent,
     GeneralFormComponent,
-    VibeComponent,
     UserProfileComponent,
     SidebarComponent,
     EventsComponent,
     VibeSessionComponent,
     MemberComponent,
-    ResetPasswordComponent,
+    ReplyFeedComponent
+
   ],
-  imports: [
+  imports: [    
     BrowserModule,
     AppRoutingModule,
     ScrollingModule,
@@ -72,10 +75,13 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule,
     MaterialModule,
-    FormsModule,
-    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [HttpClient ,LoginService, LogoutService, { provide: HTTP_INTERCEPTORS, useClass: JWT_Interceptor, multi: true}],
   bootstrap: [AppComponent],
