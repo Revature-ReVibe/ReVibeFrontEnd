@@ -28,7 +28,7 @@ export class FormComponent implements OnInit {
     this.field='';
   }
   
-  account = new User("sampleUserName", "samplePassword");
+  account = new User("changedUsername", "changedname", "changedname@changedemail.com", "https://mefunny-test-bucket.s3.amazonaws.com/1634357235922_orly.jpg", 1738, "changedpassword");
   
   submitForm() {
     //return this.accountService.submitForm(this.account).subscribe((data) => console.log(data), (error) => { console.log("Error handler was invoked")})
