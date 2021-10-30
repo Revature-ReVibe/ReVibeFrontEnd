@@ -36,7 +36,7 @@ export class GeneralFormComponent implements OnInit {
   newUser() {
     console.log(this.model)
     this.userService.updateUser(this.model).subscribe();
-    this.router.navigateByUrl("/profile")
+    this.router.navigateByUrl("/")
     // this.model = new User(42, '', '');
   }
 
