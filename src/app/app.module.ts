@@ -53,6 +53,7 @@ import { VibeSessionComponent } from './components/vibe-session/vibe-session.com
 import { MemberComponent } from './components/member/member.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-feed.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-fe
     EventsComponent,
     VibeSessionComponent,
     MemberComponent,
-    ReplyFeedComponent
+    ReplyFeedComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
 import { ResetPasswordService } from 'src/app/service/reset-password.service';
 
 @Component({
@@ -25,11 +26,12 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   resetPassword(){
-    this.resetService.resetPassword(this.f.email.value).subscribe();
+    let user= new User("", "", this.f.email.value,"", 0, "", "");
+    this.resetService.resetPassword(user).subscribe();
 
     // Uncomment when back and front are connected here, this is meant to redirect user back to login after 
     // reset is successful
-    // this.router.navigateByUrl("/login")
+    this.router.navigateByUrl("/login")
   }
 
 }
