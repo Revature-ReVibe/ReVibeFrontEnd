@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserProfileComponent } from '../components/user-profile/user-profile.component';
 import { User } from '../models/User';
 import { UserService } from '../service/user.service';
 
@@ -16,7 +18,7 @@ export class GeneralFormComponent implements OnInit {
   //   'option 3'
   // ];
 
-  model = new User("username","name", "email", "profilePic", 1, "jwt","password");
+  model = new User("","", "", "", 1, "","");
   submitted = false;
 
 
@@ -34,10 +36,11 @@ export class GeneralFormComponent implements OnInit {
   newUser() {
     console.log(this.model)
     this.userService.updateUser(this.model).subscribe();
+    this.router.navigateByUrl("/profile")
     // this.model = new User(42, '', '');
   }
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private router:Router) { }
 
   ngOnInit(): void {
   }

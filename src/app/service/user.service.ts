@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  user = new User("changedUsername", "changedname", "changedname@changedemail.com", "changedURL", 1738, "changedpassword")
+  // user = new User("changedUsername", "changedname", "changedname@changedemail.com", "changedURL", 1738, "changedpassword")
   // findUser(username: string):Observable<User>{
   //   return this.http.get('/api/users/' + username).pipe(map((user:User)=>user))
   // }
@@ -24,7 +24,7 @@ export class UserService {
   }
 
   updateUser(user:User){
-    return this.httpClient.post(environment.updateUser, this.user);
+    return this.httpClient.post(environment.updateUser, user);
   }
 
 }
