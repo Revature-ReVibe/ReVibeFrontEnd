@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from 'src/app/models/User';
@@ -18,11 +19,17 @@ export class UserProfileComponent implements OnInit {
   
 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("ReVibeSocialMediaApp-LocalStorageLocation") == null)
+    {
+      this.router.navigateByUrl('login')
+    }
+    else{
+      this.getUser();
       
-    this.getUser();
+    }  
     // this.updateUser();
   }
 
