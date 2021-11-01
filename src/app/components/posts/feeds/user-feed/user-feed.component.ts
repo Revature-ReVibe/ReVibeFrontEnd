@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
-import {Account} from "../../../../models/Account";
 
 const postCount: number = 100;
 
