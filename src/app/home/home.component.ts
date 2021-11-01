@@ -11,9 +11,16 @@ export class HomeComponent implements OnInit {
   username:string="";
   password:string="";
 
-  constructor(private route:Router) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("ReVibeSocialMediaApp-LocalStorageLocation") == null)
+    {
+      this.router.navigateByUrl('login')
+    }
+    else{
+      
+    }
   }
 
 }
