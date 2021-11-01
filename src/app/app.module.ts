@@ -63,8 +63,8 @@ import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-fe
     EventsComponent,
     VibeSessionComponent,
     MemberComponent,
-    ReplyFeedComponent
-
+    ReplyFeedComponent,
+    ResetPasswordComponent
   ],
   imports: [    
     BrowserModule,
