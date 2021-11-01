@@ -54,6 +54,7 @@ import { MemberComponent } from './components/member/member.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-feed.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { NewReplyComponent } from './components/posts/new-reply/new-reply.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MemberComponent,
     ReplyFeedComponent,
     ResetPasswordComponent
+    NewReplyComponent
   ],
   imports: [
     BrowserModule,

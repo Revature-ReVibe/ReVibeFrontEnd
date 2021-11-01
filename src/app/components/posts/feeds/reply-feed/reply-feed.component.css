@@ -1,1 +1,7 @@
+mat-card {
+  /*display: flex;*/
+}
 
+.mat-fab {
+  position: fixed !important;
+}

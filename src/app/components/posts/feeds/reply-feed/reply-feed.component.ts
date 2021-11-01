@@ -1,7 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {Account} from "../../../../models/Account";
+import {NewReplyComponent} from "../../new-reply/new-reply.component";
 
 const postCount: number = 5;
 
@@ -16,7 +17,7 @@ export class ReplyFeedComponent implements OnInit {
   replies: Vibe[] = [];
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) {
     this.parentVibe = data.vibe;
 
     //Dummy data
@@ -27,6 +28,12 @@ export class ReplyFeedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  openNewReplyDialog() {
+    const dialogRef = this.dialog.open(NewReplyComponent, {
+      data: {parent: this.parentVibe}
+    });
   }
 
 }
