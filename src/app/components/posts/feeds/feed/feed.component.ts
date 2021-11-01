@@ -22,7 +22,7 @@ export class FeedComponent implements OnInit {
   openRepliesDialog(vibe: Vibe) {
     const dialogRef = this.dialog.open(ReplyFeedComponent, {
       data: {vibe: vibe},
-      height: 'fit',
+      height: '80%',
       width: '50%'
     });
   }
