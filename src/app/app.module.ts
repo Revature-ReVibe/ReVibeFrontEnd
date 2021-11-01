@@ -78,7 +78,7 @@ import { NewReplyComponent } from './components/posts/new-reply/new-reply.compon
     VibeSessionComponent,
     MemberComponent,
     ReplyFeedComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
     NewReplyComponent
   ],
   imports: [

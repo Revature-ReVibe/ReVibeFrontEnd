@@ -18,7 +18,7 @@ export class UserFeedComponent implements OnInit {
   ngOnInit(): void {
     //Dummy data, should be replaced with fetching data from server (get posts associated with user)
     for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, new Account('usr', 'pswrd', ''), 'Message', []);
+      let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
       this.vibes.push(newVibe);
     }
   }

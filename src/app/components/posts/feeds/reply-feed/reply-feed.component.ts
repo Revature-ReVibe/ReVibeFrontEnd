@@ -22,7 +22,7 @@ export class ReplyFeedComponent implements OnInit {
 
     //Dummy data
     for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, new Account('usr', 'pswrd', ''), 'Message', []);
+      let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
       this.replies.push(newVibe);
     }
   }
