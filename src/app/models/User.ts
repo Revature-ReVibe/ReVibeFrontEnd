@@ -1,7 +1,7 @@
 export class User{
 
     constructor(public username:string, public name:string,  public email:string,
-                public profilePic:string, public userId:number, public password?:string)
+                public profilePic:string, public userId:number, public jwt:string, public password?:string)
     {
         this.username = username;
         this.name = name;
@@ -9,6 +9,7 @@ export class User{
         this.password = password;
         this.profilePic = profilePic;
         this.userId = userId;
+        this.jwt = jwt;
     }
 
     getUsername(){
