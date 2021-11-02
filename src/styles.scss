@@ -16,9 +16,15 @@ $light-gray: #B9B9BA;
 $lighter-gray: #dbdbdb;
 $blue: #72A4C2;
 
+*,::before,::after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-html, body { height: 100%; }
 body { margin: 0;
   font-family: 'Poppins', sans-serif !important;
 }
