@@ -1,10 +1,9 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
-import {Account} from "../../../../models/Account";
 import {NewReplyComponent} from "../../new-reply/new-reply.component";
+import {VibeService} from "../../../../service/vibe.service";
 
-const postCount: number = 5;
 
 @Component({
   selector: 'app-reply-feed',
@@ -17,23 +16,33 @@ export class ReplyFeedComponent implements OnInit {
   replies: Vibe[] = [];
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog, private vibeService: VibeService) {
     this.parentVibe = data.vibe;
 
-    //Dummy data
-    for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, new Account('usr', 'pswrd', ''), 'Message', []);
-      this.replies.push(newVibe);
-    }
   }
 
   ngOnInit(): void {
+    this.refreshData();
   }
 
   openNewReplyDialog() {
     const dialogRef = this.dialog.open(NewReplyComponent, {
       data: {parent: this.parentVibe}
     });
+
+    dialogRef.afterClosed().subscribe(
+      () => {
+        this.refreshData();
+      }
+    )
+  }
+
+  refreshData() {
+    this.vibeService.getAllReplies(this.parentVibe.vibeId).subscribe(
+      (data) => {
+        this.replies = data;
+      }
+    );
   }
 
 }

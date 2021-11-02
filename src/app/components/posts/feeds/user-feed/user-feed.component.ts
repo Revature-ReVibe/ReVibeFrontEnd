@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
-import {Account} from "../../../../models/Account";
-
-const postCount: number = 100;
+import {MatDialog} from "@angular/material/dialog";
+import {VibeService} from "../../../../service/vibe.service";
+import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
 
 @Component({
   selector: 'app-user-feed',
@@ -13,13 +13,27 @@ export class UserFeedComponent implements OnInit {
 
   vibes: Vibe[] = [];
 
-  constructor() { }
+  constructor(public dialog: MatDialog, private vibeService: VibeService) { }
 
   ngOnInit(): void {
-    //Dummy data, should be replaced with fetching data from server (get posts associated with user)
-    for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, new Account('usr', 'pswrd', ''), 'Message', []);
-      this.vibes.push(newVibe);
-    }
+    this.refreshData();
+  }
+
+  openNewVibeDialog() {
+    const dialogRef = this.dialog.open(NewVibeComponent);
+
+    dialogRef.afterClosed().subscribe(
+      () => {
+        this.refreshData();
+      }
+    )
+  }
+
+  refreshData() {
+    this.vibeService.getVibesByCurrentUser().subscribe(
+      (data) => {
+        this.vibes = data
+      }
+    );
   }
 }

@@ -8,10 +8,10 @@
   <mat-card-content>
     <form>
       <mat-form-field appearance="fill" >
-        <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="5" placeholder="What's up?"></textarea>
+        <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows="5" placeholder="What's up?" [(ngModel)]="message" name="message"></textarea>
       </mat-form-field>
       <mat-form-field appearance="fill" *ngIf="takeImage">
-        <input matInput type="text" placeholder="Image URL"/>
+        <input matInput type="text" placeholder="Image URL" [(ngModel)]="image" name="imageUrl"/>
       </mat-form-field>
     </form>
   </mat-card-content>
