@@ -6,8 +6,14 @@
   src: local("Futura Std"), url("/assets/fonts/Futura-Std-Book.otf") format("truetype");
 }
 
-html, body {
-  height: 100%;
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

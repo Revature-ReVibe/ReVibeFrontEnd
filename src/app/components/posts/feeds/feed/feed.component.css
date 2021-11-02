@@ -1,15 +1,22 @@
 
 .container {
-  padding-left: 3rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 cdk-virtual-scroll-viewport {
+  width: 70%;
   height: 95vh;
   margin-top: 10px;
   scroll-snap-align: end;
 }
 
 
-
-
-
+@media only screen and (max-width: 600px){
+  cdk-virtual-scroll-viewport {
+    width: 100%;
+  }
+}
