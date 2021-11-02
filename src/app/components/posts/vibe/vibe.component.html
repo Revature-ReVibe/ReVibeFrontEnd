@@ -1,12 +1,9 @@
 
-<div class="content">
+<div class="container-fluid">
 
 <mat-card class="vibe-card">
 
   <div (click)="openRepliesDialog()">
-    <mat-card-header>
-      <img mat-card-avatar src={{inputVibe.vibePic}}>
-    </mat-card-header>
 
     <img mat-card-image *ngIf="inputVibe.vibePic" src={{inputVibe.vibePic}}>
 

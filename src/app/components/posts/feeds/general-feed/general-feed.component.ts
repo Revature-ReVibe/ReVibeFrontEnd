@@ -21,10 +21,7 @@ export class GeneralFeedComponent implements OnInit {
   }
 
   openNewVibeDialog() {
-    const dialogRef = this.dialog.open(NewVibeComponent, {
-      backdropClass: 'backdropBackground',
-      hasBackdrop: true
-    });
+    const dialogRef = this.dialog.open(NewVibeComponent);
 
     dialogRef.afterClosed().subscribe(
       () => {
