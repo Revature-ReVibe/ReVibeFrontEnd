@@ -16,9 +16,7 @@ export class LikeService {
 
   public postLike(vibeId: number)
   {
-    let postUrl = 'http://localhost:8088/vibe/like/' +vibeId;
-    return this.http.post<Like[]>(postUrl,undefined);
+    return this.http.post<Like[]>('http://localhost:8088/vibe/like/' + vibeId, '');
   }
 
-  
 }

@@ -22,16 +22,12 @@ export class VibeComponent implements OnInit {
 
   likesArray: Like[]= [];
 
-  @Input() inputVibe: Vibe = new Vibe(1,'Hey',0,[],1,'2000',[],undefined,undefined);
+  @Input() inputVibe!: Vibe;
 
- // testVibe: Vibe = new Vibe(1, "Come at me bro!", this.likesArray.length, this.likesArray, 1,
- //  "date", [], 'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif')
-
+  testVibe: Vibe = new Vibe(1, "Come at me bro!", this.likesArray.length, this.likesArray, 0, "date", [], 'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif')
 
   constructor(private likeService: LikeService, private userService: UserService, public dialog: MatDialog) {
-
     this.inputVibe = this.testVibe;
-
     this.likeService.getLikes(this.inputVibe.vibeId)
       .subscribe((likes) => {
         this.likesArray = likes;
@@ -40,22 +36,17 @@ export class VibeComponent implements OnInit {
 
     this.userService.getUser().subscribe((data)=> {
 
+        console.log(data)
         this.user = data;
       });
 
    }
 
-   ngOnInit(
-   ){
-    console.log(this.inputVibe);
-   }
+  ngOnInit(): void {
+  }
 
   like() {
-    console.log(this.inputVibe);
-    this.likeService.postLike(this.inputVibe.vibeId).subscribe((data) => {
-      
-      console.log(data);
-    });
+    this.likeService.postLike(this.inputVibe.vibeId);
   }
 
   openRepliesDialog() {
