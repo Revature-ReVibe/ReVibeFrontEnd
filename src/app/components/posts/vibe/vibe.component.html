@@ -3,22 +3,24 @@
 
 <mat-card class="vibe-card">
 
+  <div (click)="openRepliesDialog()">
     <mat-card-header>
-        <img mat-card-avatar src= {{inputVibe.vibePic}}>
-        <mat-card-title>{{inputVibe.poster.username}}</mat-card-title>
+      <img mat-card-avatar src={{inputVibe.vibePic}}>
+      <mat-card-title>{{user.name}}</mat-card-title>
     </mat-card-header>
 
-      <img mat-card-image src= {{inputVibe.vibePic}} >
+    <img mat-card-image *ngIf="inputVibe.vibePic" src={{inputVibe.vibePic}}>
 
     <mat-card-content>
-        <p>
-            {{inputVibe.vibeMessage}}
-        </p>
+      <p>
+        {{inputVibe.vibeMessage}}
+      </p>
     </mat-card-content>
 
     <mat-card-footer>
-        {{inputVibe.likes.length}} people checked this Vibe.
+      {{inputVibe.likes.length}} people checked this Vibe.
     </mat-card-footer>
+  </div>
     <mat-card-actions>
         <button mat-stroked-button color="primary" (click)='like()' >CHECK</button>
     </mat-card-actions>
