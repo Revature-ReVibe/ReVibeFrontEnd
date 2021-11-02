@@ -1,12 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 @font-face {
   font-family: "Futura Std";
   src: local("Futura Std"), url("/assets/fonts/Futura-Std-Book.otf") format("truetype");
 }
 
+// color pallete
+$orange: #F26925;
+$dark-gray: #474C55;
+$yellow: #FCB414;
+$light-gray: #B9B9BA;
+$lighter-gray: #dbdbdb;
+$blue: #72A4C2;
+
+
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Futura', sans-serif !important
+}

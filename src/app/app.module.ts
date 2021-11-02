@@ -36,13 +36,12 @@ import {LoginComponent} from './components/login/login.component';
 import { HttpClient} from '@angular/common/http';
 
 
-//import { AccountComponent } from './components/account/account.component';
+
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {LogoutService} from './service/logoutService/logout.service';
 import {LoginService} from './service/loginService/login.service';
 
-import { AccountService } from './service/account.service';
 
 import { GeneralFormComponent } from './general-form/general-form.component';
 
@@ -59,7 +58,6 @@ import { NewReplyComponent } from './components/posts/new-reply/new-reply.compon
 @NgModule({
   declarations: [
     AppComponent,
-    //AccountComponent,
     NavBarComponent,
     HomeComponent,
     VibeComponent,

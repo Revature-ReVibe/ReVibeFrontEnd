@@ -3,3 +3,14 @@
   right: 50px;
   bottom: 50px;
 }
+
+div{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 1em;
+    font-family: 'Poppins', sans-serif !important;
+
+
+}
