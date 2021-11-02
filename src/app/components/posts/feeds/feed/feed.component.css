@@ -2,10 +2,11 @@
 .container {
   padding-left: 3rem;
 }
+
 cdk-virtual-scroll-viewport {
   height: 95vh;
-  scrollbar-width: none;
   margin-top: 10px;
+  scroll-snap-align: end;
 }
 
 

@@ -1,6 +1,6 @@
 <div class="container">
 
 <cdk-virtual-scroll-viewport itemSize="6">
-  <app-vibe *cdkVirtualFor="let post of posts; templateCacheSize: 0" (click)="openRepliesDialog(post)"></app-vibe>
+  <app-vibe *cdkVirtualFor="let post of posts; templateCacheSize: 0" [inputVibe]="post"></app-vibe>
 </cdk-virtual-scroll-viewport>
 </div>
