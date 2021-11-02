@@ -45,7 +45,7 @@ export class VibeComponent implements OnInit {
   }
 
   like() {
-    this.likeService.postLike(this.inputVibe.vibeId);
+    this.likeService.postLike(this.inputVibe.vibeId).subscribe();
   }
 
   openRepliesDialog() {
