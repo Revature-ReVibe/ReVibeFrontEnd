@@ -12,6 +12,8 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class NavBarComponent implements OnInit {
 
+  public containerIsVisible:boolean = true;
+
   constructor(private logout:LogoutService) { }
 
   ngOnInit(): void {
@@ -21,5 +23,9 @@ export class NavBarComponent implements OnInit {
     event.preventDefault();
     this.logout.signout();
   }
+  showContainer(){
+    this.containerIsVisible = !this.containerIsVisible;
+  }
+
 
 }
