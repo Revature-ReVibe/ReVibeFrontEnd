@@ -19,6 +19,9 @@ html {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif !important;
+  background-image: linear-gradient(to bottom, #f26925da 0%, #B9B9BA 100%) !important;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, h2, h3, h4, h5 {
