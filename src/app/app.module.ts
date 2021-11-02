@@ -4,18 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-
-// this is the only material-related import here.
-// for mat-specific ones, go to material.module!
 import {MaterialModule} from './material/material.module';
-
-
-
-
 import { ReactiveFormsModule } from '@angular/forms';
 import {AppComponent} from './app.component';
 import {RegistrationComponent} from './components/registration/registration.component';
-
 import {NavBarComponent} from './components/nav-bar/nav-bar.component';
 import {HomeComponent} from './home/home.component';
 import {VibeComponent} from './components/posts/vibe/vibe.component';
@@ -32,7 +24,6 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatCardModule} from "@angular/material/card";
 import {LoginComponent} from './components/login/login.component';
-
 import { HttpClient} from '@angular/common/http';
 
 
@@ -47,10 +38,6 @@ import { AccountService } from './service/account.service';
 import { GeneralFormComponent } from './general-form/general-form.component';
 
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { EventsComponent } from './components/events/events.component';
-import { VibeSessionComponent } from './components/vibe-session/vibe-session.component';
-import { MemberComponent } from './components/member/member.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { ReplyFeedComponent } from './components/posts/feeds/reply-feed/reply-feed.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
@@ -58,7 +45,6 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 @NgModule({
   declarations: [
     AppComponent,
-    //AccountComponent,
     NavBarComponent,
     HomeComponent,
     VibeComponent,
@@ -72,10 +58,6 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     GeneralFormComponent,
     VibeComponent,
     UserProfileComponent,
-    SidebarComponent,
-    EventsComponent,
-    VibeSessionComponent,
-    MemberComponent,
     ReplyFeedComponent,
     ResetPasswordComponent
   ],

@@ -1,44 +1,39 @@
 <div class="newaccountform" id="newAccount">
-  <form #accountform="ngForm">
-    <div class="container">
-      <div class="row">
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput id="registration-nameInput" placeholder="Name" type="text" [(ngModel)]="account.name"
-            name="name"required #name="ngModel" />
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field>
-          <mat-label>Username</mat-label>
-          <input matInput id="registration-usernameInput" placeholder="Username" type="text"
-            [(ngModel)]="account.username" name="username"required #name="ngModel" />
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field>
-          <mat-label>Password</mat-label>
-          <input matInput id="registration-passwordInput" placeholder="Password" type="text"
-            [(ngModel)]="account.password" name="password"required #name="ngModel" />
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input matInput id="registration-emailInput" placeholder="Email" type="text" [(ngModel)]="account.email"
-            name="email"required #name="ngModel" />
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field>
-          <mat-label>Profile Picture</mat-label>
-          <input matInput id="registration-picInput" placeholder="Profile Picture" type="text"
-            [(ngModel)]="account.profilePic" name="profilepic" #name="ngModel" />
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <button id="new-account-submit" type="submit" (click)="newAccount()">
+    <form #accountform="ngForm">
+        <div class="container">
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput id="registration-nameInput" placeholder="Name" type="text" [(ngModel)]="account.name" name="name" required #name="ngModel" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input matInput id="registration-usernameInput" placeholder="Username" type="text" [(ngModel)]="account.username" name="username" required #name="ngModel" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput id="registration-passwordInput" placeholder="Password" type="text" [(ngModel)]="account.password" name="password" required #name="ngModel" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput id="registration-emailInput" placeholder="Email" type="email" [(ngModel)]="account.email" name="email" required #name="ngModel" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Profile Picture</mat-label>
+                    <input matInput id="registration-picInput" placeholder="Profile Picture" type="text" [(ngModel)]="account.profilePic" name="profilepic" #name="ngModel" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <button id="new-account-submit" type="submit" (click)="newAccount()">
           Submit
         </button>
-      </div>
-    </div>
+            </div>
+        </div>

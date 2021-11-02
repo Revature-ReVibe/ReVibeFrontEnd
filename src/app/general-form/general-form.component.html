@@ -1,88 +1,34 @@
-<!-- .container-fluid is from https://getbootstrap.com/docs/3.3/css/#overview-container -->
-
 <div class="container-fluid">
 
-  <!-- submission feedback -->
-  <!-- <div class="submission-conf" [hidden]="!submitted" style="margin-left: 4px">
-    <h4>your submission: </h4>
 
-    <p><strong>Required field</strong></p>
-    <p>{{ model.name }}</p>
+    <h1>Form Header</h1>
+    <form (ngSubmit)="onSubmit()" #UserForm="ngForm">
+        <div class="row">
 
-    <p><strong>Fill form field</strong></p>
-    <p>{{ model.username }}</p>
+            <mat-form-field appearance="standard">
+                <mat-label>Name</mat-label>
+                <input matInput id="name" [(ngModel)]="model.name" name="name" #name="ngModel">
 
-    <p><strong>Outline form field</strong></p>
-    <p>{{ model.password }}</p>
+            </mat-form-field>
 
-    <p><strong>selected</strong></p>
-    <p>{{ model.profilePic }}</p>
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput id="username" [(ngModel)]="model.username" name="username">
+            </mat-form-field>
 
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput id="password" [(ngModel)]="model.password" name="password">
+            </mat-form-field>
 
-    <button mat-stroked-button color="primary" (click)="submitted=false">Edit</button>
+            <mat-form-field appearance="outline">
+                <mat-label>Profile Picture</mat-label>
+                <input matInput id="profilePic" [(ngModel)]="model.profilePic" name="profilePic">
+            </mat-form-field>
 
-  </div> -->
-
-
-  <h1>Form Header</h1>
-  <form (ngSubmit)="onSubmit()" #UserForm="ngForm">
-    <div class="row">
-
-      <mat-form-field appearance="standard">
-        <mat-label>Name</mat-label>
-        <input  matInput  id="name"
-        
-        [(ngModel)]="model.name" name="name"
-        #name="ngModel">
-
-      </mat-form-field>
+            <button mat-stroked-button (click)="newUser()">Submit</button>
 
 
-<!-- non-required field with different appearance from above  (fill not standard)  -->
-
-      <mat-form-field appearance="fill">
-        <mat-label>Username</mat-label>
-        <input matInput   id="username"
-        [(ngModel)]= "model.username" name="username">
-      </mat-form-field>
-
-
-<!-- yet another appearance -->
-
-      <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput 
-        id="password"
-        [(ngModel)]= "model.password" name="password">
-      </mat-form-field>
-
-
-<!-- drop down required w/ fill appearance -->
-    <!-- <mat-form-field appearance="fill">
-      <mat-label>Select</mat-label>
-      <mat-select required
-      [(ngModel)]= "model.option" name="option">
-
-        <mat-option *ngFor="let pow of options" [value]="pow">{{pow}}</mat-option>
-
-      </mat-select>
-    </mat-form-field> -->
-    
-    <mat-form-field appearance="outline">
-      <mat-label>Profile Picture</mat-label>
-      <input matInput 
-      id="profilePic"
-      [(ngModel)]= "model.profilePic" name="profilePic">
-    </mat-form-field>
-
-    <!-- buttons -->
-    <!-- submits with feedback -->
-    <button mat-stroked-button (click)="newUser()">Submit</button>
-
-    <!-- checks if required fields are ok before activated status -->
-    <!-- <button mat-stroked-button color="warn" type="submit"
-    [disabled]="!UserForm.form.valid">submit*</button> -->
-
-   </div>
- </form>
+        </div>
+    </form>
 </div>

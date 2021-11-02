@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+  get f() { console.log(this.loginForm.controls); return this.loginForm.controls; }
 
 
   login(){
+    console.log(this.f)
     this.loginService.login(this.f.username.value, this.f.password.value).subscribe(user => {
       this.router.navigateByUrl("/")
     });

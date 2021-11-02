@@ -1,5 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegistrationComponent } from './registration.component';
 
 describe('RegistrationComponent', () => {
@@ -8,7 +10,19 @@ describe('RegistrationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistrationComponent ]
+      declarations: [ RegistrationComponent ],
+      imports: [
+        HttpClientTestingModule,
+        FormsModule
+      ],
+      providers: [
+        {
+           provide: Router,
+           useValue: {
+              url: '/login'
+           }
+        }
+      ]
     })
     .compileComponents();
   });
@@ -22,4 +36,5 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

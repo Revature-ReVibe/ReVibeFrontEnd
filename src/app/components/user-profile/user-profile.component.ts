@@ -30,7 +30,6 @@ export class UserProfileComponent implements OnInit {
       this.getUser();
       
     }  
-    // this.updateUser();
   }
 
   ngOnDestroy(){
@@ -42,14 +41,9 @@ export class UserProfileComponent implements OnInit {
     return this.userService.getUser().subscribe((data)=>
     {
       console.log(data)
-      this.user = data;
-      //console.log(user)   
+      this.user = data; 
     });
   }
 
-  // updateUser()
-  // {
-  //   return this.userService.updateUser().subscribe();
-  // }
 
 }

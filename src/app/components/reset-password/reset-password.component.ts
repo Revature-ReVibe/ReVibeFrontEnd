@@ -19,7 +19,6 @@ export class ResetPasswordComponent implements OnInit {
     })
   }
 
-    // convenience getter for easy access to form fields
     get f() { return this.resetForm.controls; }
 
   ngOnInit(): void {
@@ -28,9 +27,6 @@ export class ResetPasswordComponent implements OnInit {
   resetPassword(){
     let user= new User("", "", this.f.email.value,"", 0, "", "");
     this.resetService.resetPassword(user).subscribe();
-
-    // Uncomment when back and front are connected here, this is meant to redirect user back to login after 
-    // reset is successful
     this.router.navigateByUrl("/login")
   }
 

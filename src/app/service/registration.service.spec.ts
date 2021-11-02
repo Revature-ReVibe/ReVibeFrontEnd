@@ -5,7 +5,7 @@ import { RegistrationService } from './registration.service';
 import { HttpClient } from '@angular/common/http';
 import { newAccount } from '../models/newAccount';
 
-describe('RegistrationService', () => {
+xdescribe('RegistrationService', () => {
   let service: RegistrationService;
   let http: HttpClient;
   let httpTestingController: HttpTestingController;
