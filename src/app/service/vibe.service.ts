@@ -32,6 +32,6 @@ export class VibeService {
   }
 
   getVibesByCurrentUser() {
-    return this.httpClient.get(environment.serverLocationURL + '/find/account') as Observable<Vibe[]>;
+    return this.httpClient.get(environment.serverLocationURL + 'vibe/find/account') as Observable<Vibe[]>;
   }
 }
