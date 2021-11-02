@@ -12,11 +12,14 @@ import {ReplyFeedComponent} from "../reply-feed/reply-feed.component";
 export class FeedComponent implements OnInit {
 
   @Input()
-  posts!: Vibe[];
+  posts: Vibe[] = [];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) { 
+
+  }
 
   ngOnInit(): void {
+
   }
 
   openRepliesDialog(vibe: Vibe) {

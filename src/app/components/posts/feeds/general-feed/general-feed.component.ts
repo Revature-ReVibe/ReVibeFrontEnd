@@ -17,8 +17,9 @@ export class GeneralFeedComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {
     //Dummy data, should be replaced with fetching data from server (get all posts)
-    for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
+    for(let i = 1; i < postCount; i++) {
+     //let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
+      let newVibe: Vibe = new Vibe(i, "Come at me bro!", 0, [], 1, '1555555', [],'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif',undefined);
       this.vibes.push(newVibe);
     }
   }

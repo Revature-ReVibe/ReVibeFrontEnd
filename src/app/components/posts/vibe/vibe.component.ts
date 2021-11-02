@@ -20,12 +20,18 @@ export class VibeComponent implements OnInit {
 
   likesArray: Like[]= [];
 
-  @Input() inputVibe!: Vibe;
+  @Input() inputVibe: Vibe = new Vibe(1,'Hey',0,[],1,'2000',[],undefined,undefined);
 
-  testVibe: Vibe = new Vibe(1, "Come at me bro!", this.likesArray.length, this.likesArray, 0, "date", [], 'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif')
+ // testVibe: Vibe = new Vibe(1, "Come at me bro!", this.likesArray.length, this.likesArray, 1,
+ //  "date", [], 'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif')
 
+<<<<<<< Updated upstream
   constructor(private likeService: LikeService, private userService: UserService) {
     this.inputVibe = this.testVibe;
+=======
+  constructor(private likeService: LikeService, private userService: UserService, public dialog: MatDialog) {
+
+>>>>>>> Stashed changes
     this.likeService.getLikes(this.inputVibe.vibeId)
       .subscribe((likes) => {
         this.likesArray = likes;
@@ -34,17 +40,22 @@ export class VibeComponent implements OnInit {
 
     this.userService.getUser().subscribe((data)=> {
 
-        console.log(data)
         this.user = data;
       });
 
    }
 
-  ngOnInit(): void {
-  }
+   ngOnInit(
+   ){
+    console.log(this.inputVibe);
+   }
 
   like() {
-    this.likeService.postLike(this.inputVibe.vibeId);
+    console.log(this.inputVibe);
+    this.likeService.postLike(this.inputVibe.vibeId).subscribe((data) => {
+      
+      console.log(data);
+    });
   }
 
 }
