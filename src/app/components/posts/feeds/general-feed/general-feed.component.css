@@ -1,11 +1,6 @@
 
-
 .mat-fab {
   position: fixed !important;
   right: 50px;
   bottom: 50px;
-}
-
-.backdropBackground {
-  background-color: black;
 }

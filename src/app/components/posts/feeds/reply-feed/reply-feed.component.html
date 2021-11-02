@@ -1,11 +1,16 @@
 <div class="container">
-
-<mat-card>
-  <mat-card-title>
-    <app-vibe [inputVibe]="parentVibe"></app-vibe>
-  </mat-card-title>
-  <mat-card-content>
-    <app-feed [posts]="replies"></app-feed>
-  </mat-card-content>
-</mat-card>
+  <mat-card>
+    <mat-card-title>
+      <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+      </button>
+      <app-vibe [inputVibe]="parentVibe"></app-vibe>
+    </mat-card-title>
+    <mat-card-content>
+      <app-feed [posts]="replies" *ngIf="replies.length > 0"></app-feed>
+    </mat-card-content>
+    <button mat-fab (click)="openNewReplyDialog()">
+      <mat-icon>reply</mat-icon>
+    </button>
+  </mat-card>
 </div>
