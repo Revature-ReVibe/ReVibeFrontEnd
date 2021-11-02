@@ -27,19 +27,18 @@ export class VibeComponent implements OnInit {
   testVibe: Vibe = new Vibe(1, "Come at me bro!", this.likesArray.length, this.likesArray, 0, "date", [], 'https://mefunny-test-bucket.s3.amazonaws.com/1634357350701_comeatmebro.jfif')
 
   constructor(private likeService: LikeService, private userService: UserService, public dialog: MatDialog) {
-    this.inputVibe = this.testVibe;
-    this.likeService.getLikes(this.inputVibe.vibeId)
-      .subscribe((likes) => {
-        this.likesArray = likes;
-        this.inputVibe.likes = this.likesArray;
-      });
-
-    this.userService.getUser().subscribe((data)=> {
-
-        console.log(data)
-        this.user = data;
-      });
-
+    // this.inputVibe = this.testVibe;
+    // this.likeService.getLikes(this.inputVibe.vibeId)
+    //   .subscribe((likes) => {
+    //     this.likesArray = likes;
+    //     this.inputVibe.likes = this.likesArray;
+    //   });
+    //
+    // this.userService.getUser().subscribe((data)=> {
+    //
+    //     console.log(data)
+    //     this.user = data;
+    //   });
    }
 
   ngOnInit(): void {

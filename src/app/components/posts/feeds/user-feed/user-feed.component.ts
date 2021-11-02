@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
+import {MatDialog} from "@angular/material/dialog";
+import {VibeService} from "../../../../service/vibe.service";
+import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
 
 const postCount: number = 100;
 
@@ -12,13 +15,17 @@ export class UserFeedComponent implements OnInit {
 
   vibes: Vibe[] = [];
 
-  constructor() { }
+  constructor(public dialog: MatDialog, private vibeService: VibeService) { }
 
   ngOnInit(): void {
-    //Dummy data, should be replaced with fetching data from server (get posts associated with user)
-    for(let i = 0; i < postCount; i++) {
-      let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
-      this.vibes.push(newVibe);
-    }
+    this.vibeService.getVibesByCurrentUser().subscribe(
+      (data) => {
+        this.vibes = data
+      }
+    )
+  }
+
+  openNewVibeDialog() {
+    const dialogRef = this.dialog.open(NewVibeComponent);
   }
 }
