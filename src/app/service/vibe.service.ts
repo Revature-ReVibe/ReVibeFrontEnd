@@ -20,11 +20,11 @@ export class VibeService {
   }
 
   createNewVibe(vibe: Vibe) {
-    return this.httpClient.post(environment.serverLocationURL + '/vibe/createVibe', JSON.stringify(vibe)) as Observable<Vibe>;
+    return this.httpClient.post(environment.serverLocationURL + '/vibe/createVibe', vibe) as Observable<Vibe>;
   }
 
   createNewReply(reply: Vibe, parentId: number) {
-    return this.httpClient.post(environment.serverLocationURL + '/vibe/createReply/' + parentId, JSON.stringify(reply)) as Observable<Vibe>;
+    return this.httpClient.post(environment.serverLocationURL + '/vibe/createReply/' + parentId, reply) as Observable<Vibe>;
   }
 
   getAllReplies(parentId: number) {
@@ -32,6 +32,6 @@ export class VibeService {
   }
 
   getVibesByCurrentUser() {
-    return this.httpClient.get(environment.serverLocationURL + 'vibe/find/account') as Observable<Vibe[]>;
+    return this.httpClient.get(environment.serverLocationURL + '/vibe/find/account') as Observable<Vibe[]>;
   }
 }

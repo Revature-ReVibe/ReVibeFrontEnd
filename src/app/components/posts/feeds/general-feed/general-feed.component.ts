@@ -2,10 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Vibe} from "../../../../models/Vibe";
 import {MatDialog} from "@angular/material/dialog";
 import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
-import {Account} from "../../../../models/Account";
 import {VibeService} from "../../../../service/vibe.service";
 
-const postCount: number = 30;
 
 @Component({
   selector: 'app-general-feed',
@@ -16,20 +14,10 @@ export class GeneralFeedComponent implements OnInit {
 
   vibes: Vibe[] = [];
 
-  constructor(public dialog: MatDialog, private vibeService: VibeService) {
-    //Dummy data, should be replaced with fetching data from server (get all posts)
-    // for(let i = 0; i < postCount; i++) {
-    //   let newVibe: Vibe = new Vibe(i, "Message", 0, [], 1, "date", []);
-    //   this.vibes.push(newVibe);
-    // }
-  }
+  constructor(public dialog: MatDialog, private vibeService: VibeService) {  }
 
   ngOnInit(): void {
-    this.vibeService.getAllVibes().subscribe(
-      (data) => {
-        this.vibes = data;
-      }
-    )
+    this.refreshData();
   }
 
   openNewVibeDialog() {
@@ -37,6 +25,20 @@ export class GeneralFeedComponent implements OnInit {
       backdropClass: 'backdropBackground',
       hasBackdrop: true
     });
+
+    dialogRef.afterClosed().subscribe(
+      () => {
+        this.refreshData();
+      }
+    )
+  }
+
+  refreshData() {
+    this.vibeService.getAllVibes().subscribe(
+      (data) => {
+        this.vibes = data;
+      }
+    )
   }
 
 }

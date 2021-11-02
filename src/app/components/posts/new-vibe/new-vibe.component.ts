@@ -24,6 +24,7 @@ export class NewVibeComponent implements OnInit {
   submitVibe() {
     let vibe: Vibe = new Vibe(0, this.message, 0, [], 0, '', [], this.image);
     this.vibeService.createNewVibe(vibe).subscribe();
+    this.dialogRef.close();
   }
 
   toggleImageField() {

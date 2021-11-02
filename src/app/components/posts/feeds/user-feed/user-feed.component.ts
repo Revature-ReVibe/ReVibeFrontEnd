@@ -4,8 +4,6 @@ import {MatDialog} from "@angular/material/dialog";
 import {VibeService} from "../../../../service/vibe.service";
 import {NewVibeComponent} from "../../new-vibe/new-vibe.component";
 
-const postCount: number = 100;
-
 @Component({
   selector: 'app-user-feed',
   templateUrl: './user-feed.component.html',
@@ -18,14 +16,24 @@ export class UserFeedComponent implements OnInit {
   constructor(public dialog: MatDialog, private vibeService: VibeService) { }
 
   ngOnInit(): void {
-    this.vibeService.getVibesByCurrentUser().subscribe(
-      (data) => {
-        this.vibes = data
-      }
-    )
+    this.refreshData();
   }
 
   openNewVibeDialog() {
     const dialogRef = this.dialog.open(NewVibeComponent);
+
+    dialogRef.afterClosed().subscribe(
+      () => {
+        this.refreshData();
+      }
+    )
+  }
+
+  refreshData() {
+    this.vibeService.getVibesByCurrentUser().subscribe(
+      (data) => {
+        this.vibes = data
+      }
+    );
   }
 }
