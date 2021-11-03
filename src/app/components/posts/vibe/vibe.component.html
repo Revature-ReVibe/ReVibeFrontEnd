@@ -5,7 +5,10 @@
 
   <div (click)="openRepliesDialog()">
 
-    <img mat-card-image *ngIf="inputVibe.vibePic" src={{inputVibe.vibePic}}>
+    <div class="img-div">
+      <img mat-card-image *ngIf="inputVibe.vibePic" src={{inputVibe.vibePic}}>
+    </div>
+    
 
     <mat-card-content>
       <p>

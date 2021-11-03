@@ -20,20 +20,33 @@ a:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 400px){
   mat-toolbar, .right {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     height: fit-content;
+    margin:  0 auto;
+    padding: 2cm;
   }
-
-  h2 {
-    width: 100%;
-    padding: .5rem;
-  }
-
 }
+  @media only screen and (max-width: 400px){
+    mat-toolbar,
+  .logo{
+  width: 100%;
+  padding: .5rem;
+  font-size: 36px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+
+
+  
+}
+  }
+
+
 
 
 
